@@ -2,7 +2,7 @@
 include_once("config/config.php");
 
 // récupération du paramètre p -> page controler
-$get_p = isset($_GET["p"]) ? $_GET["p"] : "home";
+$get_p = isset($_GET["p"]) ? $_GET["p"] : "index";
 
 // vérification de l'existence de cette page dans le dossier controler
 if(file_exists("controler/".$get_p.".php")){

@@ -8,11 +8,16 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href='' title='' >Home</a></li>
-                        <li><a href='' title='' >Cabinet</a></li>
-                        <li><a href='' title='' >Missions</a></li>
-                        <li><a href='' title='' >FAQ</a></li>
-                        <li><a href='' title='' >Contact</a></li>
+                        
+                        <?php
+                        
+                        foreach($result_menu as $rm){
+                            $item_menu= $rm['item_menu'];
+                            $item_id=   $rm['item_id'];
+                            echo "<li><a href='?p=item&id=".$item_id."' title=''>".$item_menu."</a></li>";
+                       }
+                        
+                        ?>
                         <li><a href='admin.php' title="connexion à l'espace membre"><span class='fa fa-sign-in'></span></a></li>
                     </ul>
                 </nav>

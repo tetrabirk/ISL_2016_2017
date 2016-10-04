@@ -6,11 +6,12 @@
 //
 include_once("lib/item.php");
 
-
-
 $get_id = isset($_GET["id"]) ? ($_GET["id"]) : "1";
 
-$result=getItem($get_id);
+
+
+$result_page=getItem($get_id);
+$result_menu=getItem(0);
 
 $view_file="item";
 
