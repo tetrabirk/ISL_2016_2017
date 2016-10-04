@@ -1,0 +1,254 @@
+html{
+    background-color: #F4F4F4;
+}
+body{
+    color: #383838;
+}
+
+#content{
+    
+}
+#content h1{
+    color: #C0B283;
+    text-shadow: 0px 2px 2px #fff, -2px 3px 2px #DDD1C1;
+    margin-bottom: 0;
+}
+#content h2{
+    color: #DDD1C1;
+    text-shadow: 0px 2px 1px #fff;
+    font-size: 2em;
+    margin-top: 0;
+}
+#content p{
+    text-align: justify;
+}
+
+
+.container{
+    max-width: 1024px;
+    margin-top: 20px;
+}
+
+.input_long{
+    width: 68%;
+}
+.input_short{
+    width: 28%;
+}
+
+.msg_error{
+    width: 100%;
+    text-align: center;
+    background-color: #FFA500;
+    color: #fff;
+    padding: 20px 0px;
+}
+.msg_ok{
+    width: 100%;
+    text-align: center;
+    background-color: #A6D785;
+    color: #516840;
+    padding: 20px 0px;
+}
+
+
+.red{
+    color: red;
+}
+
+
+
+#nav{
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee; 
+}
+
+#logo{
+    height: 50px;
+    margin-top: 5px;
+}
+#logo a{
+    background-color: transparent;
+    height: 100%;
+    display: inline-block;
+}
+#logo a img{
+    height: 100%;
+}
+
+#nav .container{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#nav nav ul{
+    list-style: none;
+    text-align: right;
+    margin: 0;
+}
+#nav nav ul li{
+    display: inline-block;
+    margin: 0;
+    margin-right: -4px;
+}
+#nav nav ul li a{
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    line-height: 6.5rem;
+    color: #222; 
+    background-color: transparent;
+    padding: 2em 1.2em;
+}
+#nav nav ul li a:hover{
+    background-color: #F4F4F4;
+}
+
+
+#news_box ul{
+    list-style: none;
+    margin-top: 7.7em;
+}
+#news_box ul li{
+    margin-bottom: 3em;
+}
+#news_box ul li a{
+    text-decoration: none;
+    color: #DDD1C1;
+}
+#news_box ul li a:hover{
+    color: #C0B283;
+}
+#news_box ul li a b{
+    display: block;
+    color: #C0B283;
+    text-transform: uppercase;
+}
+
+
+
+label small{
+    font-weight: normal;
+    font-style: italic;
+    color: #666666;
+}
+label small:before{
+    content: '\26A0 ';
+    color: red;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+img.preview_img{
+    max-width: 150px;
+}
+.active_link{
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 150%;
+}
+
+table tr{
+    vertical-align: top;
+}
+
+.ico_action{
+    width: 16px;
+    padding-left: 10px;
+    -webkit-transition: all .5s cubic-bezier( .6, 2, .4, 1); 
+    -moz-transition: all .5s cubic-bezier( .6, 2, .4, 1); 
+    -ms-transition: all .5s cubic-bezier( .6, 2, .4, 1); 
+    -o-transition: all .5s cubic-bezier( .6, 2, .4, 1); 
+    transition: all .5s cubic-bezier( .6, 2, .4, 1);
+}
+.ico_action:hover{
+    /*opacity: 0.85;*/
+    -webkit-transform: scale(1.5); 
+    -moz-transform: scale(1.5); 
+    -ms-transform: scale(1.5); 
+    -o-transform: scale(1.5); 
+    transform: scale(1.5);
+}
+.invisible{
+    opacity: 0.2;
+}
+.invisible:hover{
+    opacity: 1;
+    color: red;
+}
+
+
+
+
+
+
+
+footer{
+    background-color: #383838;
+    margin-top: 5em;
+}
+#footer{
+    min-height: auto;
+    height: auto;
+    text-align: left;
+    padding-top: 1.2em;
+    padding-bottom: .2em;
+    color: inherit;
+    font-size: .8em;
+}
+#footer ul{
+    margin: 0;
+    padding: 0;
+}
+#footer ul li{
+    list-style: none;
+    font-size: .95em;
+}
+
+#footer p{
+    color: #fff;
+    letter-spacing: .5px;
+    text-align: center;
+}
+#footer ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: normal;
+    letter-spacing: .5px;
+}
+#footer ul li a:hover{
+    color: #C0B283;
+}
+
+#footer ul.footer_menu{
+    text-align: right;
+}
+#footer ul.footer_menu li{
+    display: inline-block;
+    margin-right: -4px;
+    margin-left: 1em;
+}
+#footer ul.footer_menu li a{
+    background-color: transparent;
+    color: #fff;
+    color: #DDD1C1;
+    text-align: center;
+    font-size: 1.7em;
+    
+    vertical-align: middle;
+    
+    -o-transition-duration: .25s;
+    -moz-transition-duration: .25s;
+    -webkit-transition: -webkit-transform .25s;
+}
+#footer ul.footer_menu li a:hover{
+    background-color: transparent;
+    color: #C0B283;
+}
+#footer ul.footer_menu li a i.fa{
+    display: inline-block;
+    width: 30px;
+}
