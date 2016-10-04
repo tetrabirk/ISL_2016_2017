@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Trouvez les erreurs - Page brute</title>
+        
+        <style type="text/css">
+            form{
+                width:400px;
+                margin: 50px auto;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <form id="num5" action="#" method="get">
+            <fieldset>
+                <legend>Formulaire de contact</legend>
+                <label for="nom">Nom</label>
+                <br/>
+                <input type="text" id="nom" name="nom" placeholder="en majuscules" >
+                <br/>
+                
+                <label for="age">Age (compris entre 15 et 50)</label>
+                <br/>
+                <input type="range" name="age" id="age" min="15" max="50">
+                <br/>
+                
+                <label for="url">Site internet</label>
+                <br/>
+                <input type="url" name="url" id="url">
+                <br/>
+                
+                <label for="message">Message</label>
+                <br/>
+                <textarea name="message" id="message" form="num5" cols="25" rows="10">    
+                </textarea>
+                <br/>
+                
+                <input type="submit" id="button" value="Envoyer">
+            </fieldset>
+              
+        </form>
+        
+    </body>
+</html>

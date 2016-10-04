@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sélecteur avancé</title>	
+        <style>
+            .consigne {
+                border-left: 15px solid #6ce26c;
+                color: #000;
+                background-color:#afafaf;
+                padding: 10px;
+            }
+            
+            a[title~="ISL"]{
+                background-color: orange;
+                
+            }
+            
+           
+        </style>
+    </head>
+    <body>
+        <p class='consigne'>Les liens vers le site isl seront surlignés en orange</p>
+        <form id="exe1" action="#" method="post">	
+            <label>Pseudo</label>
+            <a href="#" title="visitez le site de l'école ISL">vers isl</a>
+            <a href="#" title="visitez le site de le fwb ">vers FWB</a>
+        </form>
+    </body>
+</html>

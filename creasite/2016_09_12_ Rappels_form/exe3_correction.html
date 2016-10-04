@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Trouvez les erreurs - Page brute</title>	
+    </head>
+    <body>
+        <h1>Trouvez les erreurs - Page brute</h1>
+        
+        <!--hr ne peut pas se trouver à l'intérieur de ul-->
+        <hr/>
+        <ul>
+            <li>Objectifs</li>
+            <ol>
+                <li>trouver les erreurs dans le code de la page
+                <li>corriger les erreurs</li>
+                <li>pouvoir donner l'impact de ces erreurs</li></ol>
+            <li>valider vos corrections avec le w3c</li>
+        </ul>
+        <form id="exe3"   method="get" action="#" name="exe3">	
+            <fieldset><legend>Formulaire de contact</legend>
+
+                <label for="nom">Nom</label> <br />
+                <input type="text" id="nom" name="nom" size="30" /><br />
+
+                <label for="email">Email</label><br />
+                <input type="text" name="email" id="email" size="30" /><br />
+
+                <!--name et label différent-->
+                
+                <label for="sexe">Statut</label><br />
+                
+                <!--pas d'id-->
+                <select name="sexe" id="choix">
+                    <option value="1">Femme</option>
+                    <option value="2">Homme</option>
+                    <option value="3">Autre</option>
+                </select>
+                <br />
+                
+                <!--name et label différent-->
+                <label for="dispo">Disponible immédiatement</label> 
+                
+                <!--pas d'id-->
+                 <select name="dispo" id="choix">
+                    <option value="1">Oui</option>
+                    <option value="2">Non</option>
+                </select>
+                <br />
+                
+                <!--name et label différent-->
+                <label for="site">Sites choisis</label> 
+                <input type="checkbox"  name="site" value="1" checked>Liège
+                <input type="checkbox"  name="site" value="2" >Bruxelles
+                <input type="checkbox"  name="site" value="3" >Anvers
+                <br />
+                
+                <label for="choix">Intéressé par </label> 
+
+                <input type="checkbox" name="choix" value="1">Tps plein
+                <input type="checkbox" name="choix" value="2">1/2 temps
+                <input type="checkbox" name="choix" value="3">3/4 temps
+                <br />
+                <button type="submit">Envoyer</button>
+            </fieldset>					
+
+        </form>	
+    </body>
+</html>

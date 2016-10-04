@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sélecteur avancé</title>	
+        <style>
+            .consigne {
+                border-left: 15px solid #6ce26c;
+                color: #000;
+                background-color:#afafaf;
+                padding: 10px;
+            }
+            
+            a[href^="http://"]{
+                background-color: orange;
+            }
+             
+        </style>
+    </head>
+    <body>
+        <p class='consigne'>Surligner en organge les liens actifs vers des sites</p>
+        <a href="http://www.isl.be">vers le site de isl.be</a><br>
+        <a href="#" title="">visitez le site de la fwb</a>
+        <a href="http://www.segec.be" title="">visitez le site du segec</a>
+
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sélecteur avancé</title>	
+        <style>
+            .consigne {
+                border-left: 15px solid #6ce26c;
+                color: #000;
+                background-color:#afafaf;
+                padding: 10px;
+            }
+            table{
+                width: 50%;
+                border : 3px solid #000;
+            }
+            tr:nth-last-of-type(-n+4)~tr{
+                background-color: orange;
+            }
+             
+        </style>
+    </head>
+    <body>
+        <p class='consigne'>le 3 dernières lignes du tableau seront en orange</p>
+
+        <table>
+            <tr><td>a</td></tr>
+            <tr><td>b</td></tr>
+            <tr><td>c</td></tr>
+            <tr><td>d</td></tr>
+            <tr><td>e</td></tr>
+        </table>
+
+    </body>
+</html>

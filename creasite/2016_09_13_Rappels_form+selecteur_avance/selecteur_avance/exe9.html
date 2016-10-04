@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sélecteur avancé</title>	
+        <style>
+            .consigne {
+                border-left: 15px solid #6ce26c;
+                color: #000;
+                background-color:#afafaf;
+                padding: 10px;
+            }
+            li {
+                list-style-type: none;
+                padding: 10px;
+                margin : 10px; 
+                display: inline-block;
+                background-color: #CCC;
+            }
+            
+            #un li:nth-of-type(5){
+                background-color: lime;
+            }
+            #de li:nth-last-of-type(n+4){
+                background-color: lime;
+            }
+            #tr li:nth-of-type(-n+3){
+                background-color: lime;
+            }
+            #qu li:nth-of-type(3n),#qu li:first-of-type{
+                background-color: lime;
+            }
+            #ci li:nth-of-type(even){
+                background-color: lime;
+            }
+            #si li:nth-of-type(odd){
+                background-color: lime;
+            }
+
+          
+        </style>
+    </head>
+    <body>
+        <p class='consigne'>Afficher le fond vert pour le 5e element</p>
+        <ul id="un"  >
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+            <li>G</li>
+            <li>H</li>
+            <li>I</li>
+            <li>J</li>
+        </ul>
+        <p class='consigne'>Afficher le fond vert pour tous sauf les 3 derniers</p>
+        <ul id="de"  >
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+            <li>G</li>
+            <li>H</li>
+            <li>I</li>
+            <li>J</li>
+        </ul>
+        <p class='consigne'>Afficher le fond vert pour  les 3 premiers elemnents</p>
+        <ul id="tr"  >
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+            <li>G</li>
+            <li>H</li>
+            <li>I</li>
+            <li>J</li>
+        </ul>
+        <p class='consigne'>Afficher le fond vert pour l'élement 1 puis 3 puis 6 puis 9 ...</p>
+        <ul id="qu"  >
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+            <li>G</li>
+            <li>H</li>
+            <li>I</li>
+            <li>J</li>
+        </ul>
+        <p class='consigne'>Afficher le fond vert pour les elements pairs</p>
+        <ul id="ci"  >
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+            <li>G</li>
+            <li>H</li>
+            <li>I</li>
+            <li>J</li>
+        </ul>
+        <p class='consigne'>Afficher le fond vert pour les elements impairs</p>
+        <ul id="si"  >
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+            <li>G</li>
+            <li>H</li>
+            <li>I</li>
+            <li>J</li>
+        </ul>
+        <p class='consigne'>Afficher le fond vert pour l'avant dernier element</p>
+        <ul id="se"  >
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+            <li>G</li>
+            <li>H</li>
+            <li>I</li>
+            <li>J</li>
+        </ul>
+
+
+
+
+    </body>
+</html>

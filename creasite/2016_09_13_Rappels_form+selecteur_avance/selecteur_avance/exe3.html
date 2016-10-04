@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sélecteur avancé</title>	
+        <style>
+            .consigne {
+                border-left: 15px solid #6ce26c;
+                color: #000;
+                background-color:#afafaf;
+                padding: 10px;
+            }
+            
+            p[class*="bg"]{
+                background-color: orange;
+            }
+             
+        </style>
+    </head>
+    <body>
+        <p class='consigne'>Les lignes dont le style contient le mot bg seront surlignées en orange</p>
+        <h1>Titre</h1>
+        <p class="bg-paire">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        <p class="bg-impair">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        <p class="bg-paire">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        <p class="color-rouge">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+    </body>
+</html>

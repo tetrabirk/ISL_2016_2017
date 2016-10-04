@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Trouvez les erreurs - Page brute</title>	
+    </head>
+    <body>
+        <h1>Trouvez les erreurs - Page brute</h1>
+        <ul>
+            <li>Objectifs</li><hr/>
+            <ol>
+                <li>trouver les erreurs dans le code de la page
+                <li>corriger les erreurs</li>
+                <li>pouvoir donner l'impact de ces erreurs</li></ol>
+            <li>valider vos corrections avec le w3c</li>
+        </ul>
+        <form id="exe3"   method="get">	
+            <fieldset><legend>Formulaire de contact</legend>
+
+                <label for="name">Nom</label> <br />
+                <input type="text"   id="name" size="30" /><br />
+
+                <label for="email">Email</label><br />
+                <input type="text" name="email" id="email" size="30" /><br />
+
+                <label for="choix">Statut</label><br />
+                <select name="sexe" id="">
+                    <option value="1">Femme</option>
+                    <option value="2">Homme</option>
+                    <option value="3">Autre</option>
+                </select>
+                <br />
+                <label for="choix">Disponible immédiatement</label> 
+                 <select name="dispo" id="">
+                    <option value="1">Oui</option>
+                    <option value="2">Non</option>
+                </select>
+                <br />
+                <label for="choix">Sites choisis</label> 
+                <input type="checkbox"  name="choix" value="1" checked>Liège
+                <input type="checkbox"  name="choix" value="2" >Bruxelles
+                <input type="checkbox"  name="choix" value="2" >Anvers
+                <br />
+                <label for="choix">Intéressé par </label> 
+
+                <input type="checkbox" name="choix" value="1">Tps plein
+                <input type="checkbox" name="choix" value="2">1/2 temps
+                <input type="checkbox" name="choix" value="3">3/4 temps
+                <br />
+                <button type="submit">Envoyer</button>
+            </fieldset>					
+
+        </form>	
+    </body>
+</html>
