@@ -21,4 +21,10 @@ if(vol<=30){
     prix = (vol-30)*tarif1;
 }else if(vol<1000){
     prix = (470*tarif1)+(vol-500)*tarif2;
+}else{
+    prix = (470*tarif1)+(500*tarif2)+(vol-1000)*tarif3;
 }
+
+prix = prix + (prix*tva);
+
+console.log(prix);
