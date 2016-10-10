@@ -10,8 +10,8 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <a href="2016_09_19_recap_include/MVC_de_base/index.php">mvc de base</a>
-        
+        <a href="2016_09_19_recap_include/MVC_de_base/index.php">mvc de base</a><br/>
+        <a href="2016_10_10_MVC_admin/index.php">mvc admin</a>
         
         
     </body>

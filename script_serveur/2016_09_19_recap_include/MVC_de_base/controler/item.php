@@ -11,7 +11,7 @@ $get_id = isset($_GET["id"]) ? ($_GET["id"]) : "1";
 
 
 $result_page=getItem($get_id);
-$result_menu=getItem(0);
+$$result_menu=getItem(0);
 
 $view_file="item";
 

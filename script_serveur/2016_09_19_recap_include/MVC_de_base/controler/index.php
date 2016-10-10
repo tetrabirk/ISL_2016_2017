@@ -7,7 +7,7 @@
 include_once("lib/item.php");
 
 $result_page=getItem(1);
-$result_menu=getItem(0);
+$$result_menu=getItem(0);
 
 $view_file="item";
 
