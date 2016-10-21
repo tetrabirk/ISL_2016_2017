@@ -2,7 +2,7 @@
 <?php
 $li_m ="";
 
-foreach($$result_menu as $rm){
+foreach($result_menu as $rm){
                             $item_menu= $rm['item_menu'];
                             $item_id=   $rm['item_id'];
                             $li_m .= "<li><a href='?p=item&id=".$item_id."' title=''>".$item_menu."</a></li>";
