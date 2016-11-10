@@ -9,8 +9,8 @@ var decal= 1;
 
 console.log(tab);
 
-for (var i = 0, max = tab.length ; i <= max; i++) {
-    j=max-i;
+for (var i = 0, max = tab.length ; i < max; i++) {
+    j=max-(i+1);
     if (j > decal-1){
         tab[j]=tab[j-decal];
     }else{
