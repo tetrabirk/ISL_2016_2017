@@ -18,6 +18,7 @@ function getItem($id){
     return requeteResultat($sql);
 }
 
+//fonction formulaire ajout/edition
 function formItem($action,$method,$data){
     $menu       =$data['menu'];
     $titre      =$data['titre'];
@@ -25,28 +26,28 @@ function formItem($action,$method,$data){
     $description=$data['description'];
     
     $form=  "";
-    $form.= "<form name='item_add' method='post' action='#'>";
+    $form.= "<form name='item_add' method='".$method."' action='".$action."'>";
     
     $form.= "<label for='menu'>Menu</label>";
-    $form.= "<input type='text' id='menu' name='menu' size='80' value='$menu'>";
+    $form.= "<input type='text' id='menu' name='menu' size='80' value='".$menu."'>";
     
     $form.= "<label for='titre'>Titre</label>";
-    $form.= "<input type='text' id='titre' name='titre' size='80' value='$titre'>";
+    $form.= "<input type='text' id='titre' name='titre' size='80' value='".$titre."'>";
     
     $form.= "<label for='soustitre'>Sous-titre</label>";
-    $form.= "<input type='text' id='soustitre' name='soustitre' size='80' value='$soustitre'>";
+    $form.= "<input type='text' id='soustitre' name='soustitre' size='80' value='".$soustitre."'>";
     
     $form.= "<label for='description'>Description</label>";
-    $form.= "<textarea id='description' name='description' cols='82' value='$description'></textarea><br/>";
+    $form.= "<textarea id='description' name='description' cols='82'>".$description."</textarea><br/>";
     
     $form.= "<label for='visible'>Présent dans le menu </label>";
     $form.= "<input type='radio' name='visible' id='visible' value='oui'>oui<br/>";
     $form.= "<input type='radio' name='visible' id='visible' value='non'>non<br/>";
     
-    $form.= "<input type='submit' id='submit' value='OK'>";
+    $form.= "<input type='submit' name='submit' id='submit' value='Envoyer'>";
         
     $form.= "</form>";
-    return $form;
+    echo $form;
     }
 
 ?>
