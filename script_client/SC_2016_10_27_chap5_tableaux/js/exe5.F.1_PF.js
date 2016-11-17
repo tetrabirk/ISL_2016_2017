@@ -1,20 +1,31 @@
 //F1. (recherche dichotomique) Comme le E1 mais les éléments du tableau sont triés
 //en ordre croissant.
 
-var tab=[1,12,23,34,45,56,67,78,89,93];
-var n;
-var d1;
-var dt;//division temp
-for (var i = 0, max = tab.length ; Math.pow(2,i-1) < max; i++) {
-    n=tab[i];
-    if(i===0){
-        d1=max;
+var trouve = false;
+var tab=[1,12,23,34,45,56,67,78,89,93];         //tableau
+var max= tab.length;                            //longueur du tableau
+var nbre=parseInt(prompt("kèss tu cherch' ?")); //nbre recherché
+var vd = 0;                                     //valeur debut;
+var vf = max;                                   //valeur fin;
+var vm;                                         //valeur milieu;
+   
+
+while(!trouve && (vf-vd>1)){
+    console.log("("+vd+"+"+vf+")/2 =>");
+    vm=parseInt((vd+vf)/2);
+    if(nbre === tab[vm]){
+        trouve = true;
+        break;
+    }else if(nbre<tab[vm]){
+        vf=vm;
+        console.log(vm+" < "+tab[vm]);
     }else{
-        d1=dt;
-    }
-    if(n<floor(tab[d1/2])){
-        
+        vd=vm;
+        console.log(vm+" >"+tab[vm]);
     }
 }
-
-//JE SAIS PAS PR LE MOMENT
+if(trouve){
+    console.log(nbre+" se trouve à la position "+vm );
+}else{
+    console.log(nbre+" n'est pas dans le tableau");
+}

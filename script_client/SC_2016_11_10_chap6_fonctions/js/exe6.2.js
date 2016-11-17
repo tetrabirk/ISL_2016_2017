@@ -23,21 +23,34 @@ function init(t,n,val){
 //d’appel : affiche(t, 20, 5, 10).
 //
 //aucune idée à quoi sert le 'n'
+//
 //j'ai un probleme avec l'énoncé donc je n'ai pas fini l'exercice
 
-function affiche (t,dim,i1,i2){
+function affiche (tab,ind1,ind2){
+    var t=tab;
+    var i1 = ind1;
+    var i2 = ind2;
+    var show ="";
     for(var i=i1, max= i2; i<max;i++){
-        t[i]= dim;
+        show += t[i]+", ";
     }
+    return show;
 }
+//var t1 = [-7,-30,45,21,13,0,15,56,7];
+//
+//console.log(affiche(t1,5,9));
 
 
 //3. Écrire la procédure (copy) qui recopie un tableau à une dimension d’entiers dans un
 //autre tableau donné. Exemple d’appel : copy(dest, orig, n).
-//
-//aucune idée à quoi sert le 'n'
 
-//FONCTIONNE PAS, je ne sais pas pq
+
+//XXXXX XXXX  XXXX  XXXXX X   X XXXX
+//X     X   X X   X X     X   X X   X
+//XXX   XXXX  XXXX  XXX   X   X XXXX
+//X     X  X  X  X  X     X   X X  X
+//XXXXX X   X X   X XXXXX  XXX  X   X
+
 
 function copy (dest, orig, n){
     var d = dest;
@@ -46,6 +59,7 @@ function copy (dest, orig, n){
     for (var i=0, max= o.length; i<max; i++){
         d[i]=o[i];
     }
+    orig = o;
 }
 
 //var tab=[2,3,5,8];
@@ -110,6 +124,10 @@ function rechLin(tab,n,val){
 //je ne sais pas trop comment faire les fct "dichtomique"
 
 function rechdicho(tab, val){
+    
+    
+    
+    
 }    
 //7. Écrire la fonction (iMinGE) qui recherche la position du plus petit élément qui dans
 //un tableau donné, est supérieur ou égal à une valeur donnée. Le tableau est
@@ -203,17 +221,17 @@ function iMaxLE(tab, val){
 //également le nombre logique d’éléments du troisième tableau.
 
 function union (tabA,tabB){
-    tA= tabA;
-    tB= tabB;
-    tC=[];
-    cptA=0;
-    cptB=0;
+    var tA= tabA;
+    var tB= tabB;
+    var tC=[];
+    var cptA=0;
+    var cptB=0;
     
     for(var i=0, max=(tA.length+tB.length); i<max; i++){
-        if(tA[cptA] < tB[cptB] || typeof(tB[cptB]) === 'undefined') {
+        if(tA[cptA] < tB[cptB] || cptB <tB.length) {
             tC[i] = tA[cptA];
             cptA++;
-        }else if(tA[cptA] > tB[cptB] || typeof(tA[cptA]) === 'undefined') {
+        }else if(tA[cptA] > tB[cptB] || cptA <tA.length) {
             tC[i] = tB[cptB];
             cptB++;
         }else if(tA[cptA] === tB[cptB]) {
@@ -238,8 +256,33 @@ function union (tabA,tabB){
 //ordre croissant à tout moment de son remplissage. La procédure renverra
 //également le nombre logique d’éléments du troisième tableau.
 
-
-//meme chose qu'au 10
+function inter (tabA,tabB){
+    var tA= tabA;
+    var tB= tabB;
+    var tC=[];
+    var cptA=0;
+    var cptB=0;
+    var i=0;
+    
+    while(cptA<tA.length && cptB<tB.length){
+        if(tA[cptA] < tB[cptB]) {
+            cptA++;
+        }else if(tA[cptA] > tB[cptB]) {
+            cptB++;
+        }else if(tA[cptA] === tB[cptB]) {
+            tC[i] = tA[cptA];
+            cptA++;
+            i++;
+            cptB++;
+        }
+    }
+    return tC.length+" : "+tC;
+}
+//var t1 = [1,12,23,34,45,56,67,78,89];
+//var t2 = [5,17,19,34,48,57,58,78,79,79,85];
+//
+//console.log(inter (t1,t2));
+//
 
 
 //12. Écrire la procédure ou fonction (diff) qui recopie dans un seul tableau les
@@ -250,57 +293,32 @@ function union (tabA,tabB){
 //également le nombre logique d’éléments du troisième tableau.
 
 function diff (tabA,tabB){
-    tA= tabA;
-    tB= tabB;
-    tC=[];
-    cptA=0;
-    cptB=0;
-    
-    for(var i=0, max=(tA.length+tB.length); i<max; i++){
-        if(tA[cptA] < tB[cptB] || typeof(tB[cptB]) === 'undefined') {
+    var tA= tabA;
+    var tB= tabB;
+    var tC=[];
+    var cptA=0;
+    var cptB=0;
+    var i=0;
+    while(cptA<tA.length){
+        if(tA[cptA] < tB[cptB] || cptB <tB.length) {
             tC[i] = tA[cptA];
+            i++;
             cptA++;
         }else if(tA[cptA] > tB[cptB]) {
             cptB++;
         }else if(tA[cptA] === tB[cptB]) {
             cptA++;
             cptB++;
-        }else if(typeof(tA[cptA]) === 'undefined'){
-            break;
         }
     }
     return tC.length+" : "+tC;
 }
-var t1 = [1,12,23,34,45,56,67,78,89];
-var t2 = [5,17,19,34,48,57,58,78,79,79,85];
-
-console.log(diff (t1,t2));
-//
-//function diff (tabA,tabB){
-//    var tA= tabA;
-//    var tB= tabB;
-//    var tC=[];
-//    var cptA=0;
-//    var cptB=0;
-//    var i=0;
-//    while(typeof(tA[cptA]) !== 'undefined'){
-//        if(tA[cptA] < tB[cptB] || typeof(tB[cptB]) === 'undefined') {
-//            tC[i] = tA[cptA];
-//            i++;
-//            cptA++;
-//        }else if(tA[cptA] > tB[cptB]) {
-//            cptB++;
-//        }else if(tA[cptA] === tB[cptB]) {
-//            cptA++;
-//            cptB++;
-//        }
-//    return tC.length+" : "+tC;
-//    }
-//}
 //var t1 = [1,12,23,34,45,56,67,78,89];
 //var t2 = [5,17,19,34,48,57,58,78,79,79,85];
 //
 //console.log(diff (t1,t2));
+
+
 
 
 //13. Écrire la procédure ou fonction (diffSym) qui recopie dans un seul tableau les
@@ -309,3 +327,32 @@ console.log(diff (t1,t2));
 //même taille et ne seront parcourus qu’une seule fois. Le troisième tableau restera
 //trié en ordre croissant à tout moment de son remplissage. La procédure renverra
 //également le nombre logique d’éléments du troisième tableau. 
+
+
+function diff (tabA,tabB){
+    var tA= tabA;
+    var tB= tabB;
+    var tC=[];
+    var cptA=0;
+    var cptB=0;
+    var i=0;
+    while(cptA<tA.length && cptB<tB.length){
+        if(tA[cptA] < tB[cptB]) {
+            tC[i] = tA[cptA];
+            i++;
+            cptA++;
+        }else if(tA[cptA] > tB[cptB]) {
+            tC[i] = tB[cptB];
+            i++;
+            cptB++;
+        }else if(tA[cptA] === tB[cptB]) {
+            cptA++;
+            cptB++;
+        }
+    }
+    return tC.length+" : "+tC;
+}
+//var t1 = [1,12,23,34,45,56,67,78,89];
+//var t2 = [5,17,19,34,48,57,58,78,79,79,85];
+//
+//console.log(diff (t1,t2));
