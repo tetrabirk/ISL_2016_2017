@@ -9,12 +9,7 @@
                 // affichage conditionnel du msg d'erreur
                 echo !empty($msg_error) ? "<p class='msg_error'>$msg_error</p>" : "";
                 // affichage du formulaire
-                if($get_action == 'add'){
-                    echo formItem($data_value, "./?p=admin_item&action=add", "post");
-
-                }else{
-                    echo formItem($data_value, "./?p=admin_item&action=update&id=$get_item_id", "post");
-                }
+                echo formItem($data_value, "./?p=admin_item&action=add", "post");
                 ?>
                 
                 

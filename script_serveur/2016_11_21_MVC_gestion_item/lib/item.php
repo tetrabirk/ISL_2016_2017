@@ -72,27 +72,42 @@ function insertItem($data){
     return ExecRequete($sql);
 }
 
-function updateItem($data){
+function updateItem($data, $id){
+    $id             = intval($id);
     $menu           = convert2DB(htmlentities_utf8($data["menu"]));
     $titre          = convert2DB(htmlentities_utf8($data["titre"]));
     $sous_titre     = convert2DB(htmlentities_utf8($data["sous_titre"]));
     $description    = convert2DB(htmlentitiesOutsideHTMLTags($data["description"]));
     $in_menu        = convert2DB(htmlentitiesOutsideHTMLTags($data["in_menu"]));
-    $id             = $data["id"];
     
     $sql = "UPDATE item 
-                SET item_menu  = '$menu',
-                item_title    = '$titre',
-                item_subtitle = '$sous_titre',
-                item_description   = '$description',
-                in_menu       = '$in_menu'
-            WHERE item.item_id = $id;
-            
-        
-        
+                SET item_menu           = '$menu', 
+                    item_title          = '$titre', 
+                    item_subtitle       = '$sous_titre', 
+                    item_description    = '$description', 
+                    in_menu             = '$in_menu' 
+            WHERE item_id = $id;
         ";
-    return ExecRequete($sql);    
+    
+    return ExecRequete($sql);
+}
+
+function deleteActiveItem($id, $visible){
+    if(!is_numeric($id)){
+        return false;
+    }
+    $id = intval($id);
+    if($id > 0){
+        $sql = "UPDATE item 
+                SET 
+                    is_visible = '$visible' 
+                WHERE item_id = $id;";
+        return ExecRequete($sql) ? true : false;
+    }else{
+        return false;
+    }
     
 }
+
 
 ?>
