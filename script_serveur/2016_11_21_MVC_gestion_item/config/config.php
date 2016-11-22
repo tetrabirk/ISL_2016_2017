@@ -10,6 +10,7 @@ define("DEBUG", true);
 // on inclus les accès aux fonctions
 include_once('fct_db.php');
 include_once('fct_global.php');
+include_once('fct_login.php');
 
 
 // connexion à la base de donnnées

@@ -22,7 +22,7 @@
                         }
                         echo $li_menu;
                         ?>
-                        <li><a href='./?p=admin_item' title="connexion à l'espace membre"><span class='fa fa-sign-in'></span></a></li>
+                        <li><a href='./?p=login' title="connexion à l'espace membre"><span class='fa fa-sign-in'></span></a></li>
                     </ul>
                 </nav>
             </div>
