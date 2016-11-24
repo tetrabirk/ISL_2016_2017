@@ -2,8 +2,8 @@
 //premier du nombre 600851475143 ? (réponse = 6857)
 
 var premiers = [2];
-
-for(var i=0; i<10; i++){
+console.log("testtt");
+for(var i=3; i<10; i++){
     for(var j=0;i<10 || j<10 ;j++){
         console.log(j);
         if(i%premiers[j]===0){
@@ -13,6 +13,8 @@ for(var i=0; i<10; i++){
 }
 console.log(premiers);
 console.log("test");
+
+
 
 //2. Un nombre palindrome est un nombre qui reste le même quel que soit le sens de la
 //lecture. Le plus grand nombre palindrome résultant du produit de deux nombres de
