@@ -1,5 +1,7 @@
 <?php
-
+if(!islogged()){
+     header('Location: ?p=login');
+}
 
 // include de la lib item contenant les fonctions nécessaires
 include_once("lib/item.php");

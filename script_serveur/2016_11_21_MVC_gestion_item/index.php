@@ -29,6 +29,7 @@ include_once("include/head.php");
         ?>
         
         <div class='container' id='content'>
+            
             <?php
             // vérification de l'existence du fichier view déclaré dans le controler sous la variable $view_file
             if(isset($view_file) && file_exists("view/".$view_file.".php")){

@@ -1,5 +1,4 @@
 <?php
-
 function islogged(){
     return isset($_SESSION['user']);
 }
@@ -15,10 +14,12 @@ function get_user($login,$password){
     $answer = requeteResultat($sql);
     
     if(!$answer){
-        $error .= "erreur dans le login ou le mot de passe";
+        $error .= "<p class='msg_error'><i class=\"fa fa-exclamation-triangle\"></i> <b>ERREUR</b><br />";
+        $error .= "erreur dans le login ou le mot de passe</p>";
         return $error;
     }else{
         $_SESSION['user'] = $answer;
+        return $answer;
     }
     
     

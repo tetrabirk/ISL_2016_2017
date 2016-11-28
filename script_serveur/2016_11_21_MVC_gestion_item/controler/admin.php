@@ -1,3 +1,7 @@
 <?php
-$view_file = 'login'
+if(!islogged()){
+     header('Location: ?p=login');
+}
+
+$view_file = 'admin_bienvenue'
 ?>
