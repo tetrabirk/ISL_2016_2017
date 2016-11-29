@@ -35,7 +35,7 @@
                 }
                 
                 ?>
-                <p class="align-right"><a href="?p=admin_item&action=add" title="cliquer pour ajouter une nouvelle entrée" class="button">ajouter</a></p>
+                <p class="align-right"><a href="?p=admin_user&action=add" title="cliquer pour ajouter une nouvelle entrée" class="button">ajouter</a></p>
                 <?php
                 echo !empty($msg_end) ? "<p class='msg_ok'>$msg_end</p>" : "";
                 ?>

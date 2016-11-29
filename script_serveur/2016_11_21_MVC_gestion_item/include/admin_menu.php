@@ -16,7 +16,7 @@ $user_prenom=$_SESSION["user"][0]["prenom"];
                         <li><a href='./?p=admin_user' title='' class="navbar-link">Gestion des users</a></li>
                         <?php
                         if(islogged()){
-                            echo" <li><span class='log'>".$user_prenom." ".$user_nom."</span><a href='./?p=login&log=out' title='déconnexion de l espace membre'><span class='fa fa-sign-out'></span></a></li>";
+                            echo" <li><a class='log' href='./?p=admin_membre'>".$user_prenom." ".$user_nom."</a><a href='./?p=login&log=out' title='déconnexion de l espace membre'><span class='fa fa-sign-out'></span></a></li>";
                         }else{
                             echo" <li><a href='./?p=login' title='connexion à l espace membre'><span class='fa fa-sign-in'></span></a></li>";
                         }
