@@ -9,7 +9,8 @@
         // affichage conditionnel du msg d'erreur
         echo !empty($msg_end) ? "<p class='msg_ok'>$msg_end</p>" : "";
         // affichage du formulaire
-        echo formUser($data_value, "./?p=admin_user&action=add", "post",false);
+        $action ="./?p=admin_user&action=update&id=".$get_id;
+        echo formUser($data_value, $action , "post");
         ?>
 
 

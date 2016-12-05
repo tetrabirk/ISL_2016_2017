@@ -42,10 +42,10 @@ function formUser($data, $action, $method){
     $parcours   = $data["parcours"];
     $level      = $data["level"];
     $login      = $data["login"];
-    $password   = $data["password"];
+    $password   = isset($data["password"]) ? $data["password"] : "";   
     
     $form = "\n";
-    $form .= "<form action=\"".$action."\" method=\"".$method."\">\n";
+    $form .= "<form action=\"".$action."\" method=\"".$method."\" enctype ='multipart/form-data'>\n";
         // champ nom
         $form .= "<label for=\"nom\">Nom</label>\n";
         $form .= "<input type=\"text\" id=\"nom\" name=\"nom\" value=\"".$nom."\" class=\"u-full-width\" /><br />\n";
@@ -75,6 +75,9 @@ function formUser($data, $action, $method){
         // champ password
         $form .= "<label for=\"password\">Mot de passe</label>\n";
         $form .= "<input type=\"password\" id=\"password\" name=\"password\" value=\"".$password."\" class=\"u-full-width\" /><br />\n";
+        // champ photo
+        $form .= "<label for=\"photo\">Photo</label>\n";
+        $form .= "<input type=\"file\" id=\"file\" name=\"photo\" class=\"u-full-width\" /><br />\n";
         // bouton submit
         $form .= "<input type=\"submit\" name=\"submit\" value=\"ok\" />\n";
         
@@ -83,6 +86,76 @@ function formUser($data, $action, $method){
     return $form;
 }
 
+function insertUser($data){
+    $nom        = $data["nom"];
+    $prenom     = $data["prenom"];
+    $diplome    = $data["diplome"]; 
+    $parcours   = $data["parcours"];
+    $level      = $data["level"];
+    $login      = $data["login"];
+    $password   = $data["password"];
+    
+    $sql = "INSERT INTO admin 
+                (login, password, nom, prenom, diplome, parcours, level)
+            VALUES 
+                ('$login', '".md5($password)."', '$nom', '$prenom', '$diplome', '$parcours', '$level');
+        ";
+    
+    return ExecRequete($sql);
+}
+
+function updateUser($data, $id){
+    $nom        = $data["nom"];
+    $prenom     = $data["prenom"];
+    $diplome    = $data["diplome"]; 
+    $parcours   = $data["parcours"];
+    $level      = $data["level"];
+    $login      = $data["login"];
+    $password   = isset($data["password"]) ? $data["password"] : "";
+    
+    $sql = "UPDATE admin 
+                SET login   ='$login',
+        ";
+    
+    
+if (empty($data["password"])){
+    $sql .= " password='".md5($password)."',";
+        
+}
+    $sql .="        nom     ='$nom',
+                    prenom  ='$prenom',
+                    diplome ='$diplome',
+                    parcours='$parcours',
+                    level   ='$level'
+                WHERE admin_id = $id
+        ";
+    
+    
+    return ExecRequete($sql);
+}
+
+function user_visibility($action, $id){
+    $sql = "";
+    $sql .= "UPDATE admin ";
+    if($action=="show"){
+        $sql .=" SET is_visible = '1' ";
+    }else{
+        $sql .=" SET is_visible = '0' ";
+    }
+    $sql.= "WHERE admin_id = $id";
+    
+    return ExecRequete($sql);
+}
+
+function user_delete($id){
+    $sql ="";
+    $sql .="DELETE FROM admin
+            WHERE admin_id = $id";
+//ajouet drop machin machin + TEST de level admin
+    
+    return ExecRequete($sql);
+
+}
 
 
 ?>
