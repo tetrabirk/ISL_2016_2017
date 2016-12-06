@@ -24,7 +24,6 @@ $post_parcours  = isset($_POST["parcours"]) ? $_POST["parcours"]: "";
 $post_level     = isset($_POST["level"])    ? $_POST["level"]   : "";
 $post_login     = isset($_POST["login"])    ? $_POST["login"]   : "";
 $post_password  = isset($_POST["password"]) ? $_POST["password"]: "";
-print_r($_FILES);
 
 switch($get_action){
     case "view":
