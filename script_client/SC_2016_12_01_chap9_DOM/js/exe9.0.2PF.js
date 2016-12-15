@@ -9,9 +9,23 @@
 //dans la console.
 
 
-var input_form = document.querySelectorAll('#form');
+//
+//var form_bytag = document.getElementsByTagName('form');
+//var form_byid = document.getElementById('form');
+//
+//console.log(form_bytag);
+//console.log(form_byid);
+//
 
-for(var i = 0, max = input_form.lenght;i<0;i++ ){
-    console.log(input_form);
+
+var input_form = document.getElementsByTagName('form');
+//
+//console.log(input_form[0].childNodes);
+//
+
+
+for(var i = 0, max = input_form[0].length;i<max;i++ ){
+    console.log(input_form[0][i].value);
 }
 
+ 

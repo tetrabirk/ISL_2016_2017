@@ -22,7 +22,7 @@ and open the template in the editor.
             <h2 class="important">Bye Bye</h2>
             <h2>Formulaire</h2>
             <form name="form" id="form">
-                <input id="nom" type="text" name="nom">
+                <input id="nom" type="text" name="nom" value="test">
                 <input id="prenom" type="text" name="prenom">
                 <input id="date" type="date" name="date">
                 <input id="email" type="text" name="email">
@@ -32,6 +32,6 @@ and open the template in the editor.
             
          
         </main>
-        <script src="js/exe9.0.2 PF.js" type="text/javascript"></script>
+        <script src="js/exe9.0.2PF.js" type="text/javascript"></script>
     </body>
 </html>

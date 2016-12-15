@@ -1,21 +1,4 @@
-//Les objets
-//
-//1 Élèves
-//Vous devez créer un objet-type pour gérer les élèves d'une classe
-//En plus des propriétés courantes d'un élève, vous devez ajouter les propriétés permettant
-//de stocker les cours suivis ainsi que les points obtenus dans ceux-ci.
-//Vous devez également créer les méthodes permettant de manipuler toutes ces propriétés
-//avec notamment :
-//• ajout d'un cours
-//• ajout de points pour les cours
-//• calcul de la moyenne pour un cours
-//• calcul de la moyenne totale
-//Créez un programme de test pour vérifier le bon fonctionnement de votre objet-type.
-//
-//2 Cours
-//Idem exercice 1, avec la création d'un objet-type pour un cours que vous utiliserez dans
-//l'objet-type Élève.
-//
+
 //3 Filière et classe
 //Une filière porte un nom, un code et est composée de cours.
 //Il est possible d'extraire, d'afficher (pour le conseil des études par exemple) le nombre de

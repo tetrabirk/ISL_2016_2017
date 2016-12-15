@@ -12,7 +12,7 @@ and open the template in the editor.
     </head>
     <body>
         <div>
-            <script src="js/00chap7_log.js" type="text/javascript"></script>
+            <script src="js/exe0.1PF.js" type="text/javascript"></script>
         </div>
     </body>
 </html>
