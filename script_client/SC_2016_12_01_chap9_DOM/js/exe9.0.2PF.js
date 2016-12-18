@@ -17,15 +17,16 @@
 //console.log(form_byid);
 //
 
+var test= "test";
+
 
 var input_form = document.getElementsByTagName('form');
 //
 //console.log(input_form[0].childNodes);
 //
 
-
 for(var i = 0, max = input_form[0].length;i<max;i++ ){
     console.log(input_form[0][i].value);
 }
 
- 
+console.log(test);
