@@ -110,9 +110,9 @@ switch ($get_action) {
         }else{
             //a: tt les champs obligatoire sont remplis        
             if(!empty($data['titre'])&&!empty($data[''])){
-                if(){
-                    
-                }
+//                if( ){
+// C4EST CIIC QUE TEST ARRIV222222222222222
+//                }
                 if (addNews($data)) {
                     $result_list = getNews(0);
                     $msg_end .= "insertion réussie";
