@@ -6,7 +6,7 @@ include 'lib/news.php';
 include 'lib/tools_img.php';
 
 $get_action = isset($_GET['action']) ? $_GET['action'] : 'view';
-$get_news_id = isset($_GET['id']) ? $_GET['id'] : '';
+$get_news_id = isset($_GET['id']) ? $_GET['id'] : 1;
 $ses_admin_id               = $_SESSION['admin_id'];
 
 

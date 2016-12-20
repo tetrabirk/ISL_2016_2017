@@ -85,4 +85,31 @@ function deleteActiveProjetCategorie($id, $visible){
     
 }
 
+function getprojet($id){
+    if(!is_numeric($id)){
+        return false;
+    }
+    
+    if($id > 0){
+        $sql = "
+            
+                            AND PC. projet_id = $id;
+                       
+                ";
+    }else{
+        $sql = "SELECT  P.admin_id, P.date_add, P.description, P.is_visible, P.projet_id, P.sous_titre, P.titre,
+                        A.nom, A.prenom,
+                        PI.link_img, PI.projet_id
+                        FROM projet AS P, admin AS A, projet_img AS PI
+                            WHERE PI.projet_id = P.projet_id
+                            AND A.admin_id = P.admin_id
+                        GROUP BY P.projet_id
+                        ORDER BY P.is_visible DESC, P.projet_id ASC;
+            ";
+    }
+    return requeteResultat($sql);
+    
+
+}
+
 ?>
