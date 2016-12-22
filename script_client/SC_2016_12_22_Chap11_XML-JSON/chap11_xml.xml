@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"
+?>
+<root>
+    <class>
+        <eleve>
+            <nom>Boberson</nom>
+            <prenom>Bob</prenom>
+            <date_naissance>07/02/1989</date_naissance>
+        </eleve>
+    </class>
+</root>
