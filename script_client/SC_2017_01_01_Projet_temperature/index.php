@@ -26,14 +26,14 @@ le(s) jour(s) où ces valeurs ont été relevées<br/>
 Pour déterminer le degré de maîtrise :<br/>
 4. Vous afficherez les valeurs sous forme de bargraphes dans la console. Une étoile
 pour 2.5°C.<br/> Exemple d'affichage :<br/>
- |-5|00|05|10|15|20|<br/>
-L|**|**|**|**|**|**| // Température = 25°C<br/>
-M|**|**|**|**|* | | // Température = 18°C<br/>
-M|**|**|**|* | | | // Température = 13.5°C<br/>
-J|**|**|**|**|**|* | // Température = 23°C<br/>
-V|**|**|**|**|**| | // Température = 21°C<br/>
-S|**|**| | | | | // Température = 6.5°C<br/>
-D|**|**|**|* | | | // Température = 14.5°C<br/><br/>
+. |-5|00|05|10|15|20|<br/>
+.L|**|**|**|**|**|**| // Température = 25°C<br/>
+.M|**|**|**|**|* |  | // Température = 18°C<br/>
+.M|**|**|**|* |  |  | // Température = 13.5°C<br/>
+.J|**|**|**|**|**|* | // Température = 23°C<br/>
+.V|**|**|**|**|**|  | // Température = 21°C<br/>
+.S|**|**|  |  |  |  | // Température = 6.5°C<br/>
+.D|**|**|**|* |  |  | // Température = 14.5°C<br/><br/>
 Vous pouvez utiliser toutes les notions et fonctions abordées dans les notes jusqu'au
 chapitre 6 compris.<br/>
 Vous serez évalués sur les points suivants :<br/>
@@ -53,6 +53,6 @@ Bon travail !<br/>
 Alain Martel
         </code>
         
-        <script src="js/projet01.js" type="text/javascript"></script>
+        <script src="js/projet01b.js" type="text/javascript"></script>
     </body>
 </html>

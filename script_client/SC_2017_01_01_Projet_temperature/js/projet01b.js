@@ -1,6 +1,7 @@
 var jour_semaine = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche']; //tableau contenant les jours de la semaine
-var cons_min = -5; //constante température minimal
-var cons_max = 25; //constante température maximal
+//les constantes doivent être des multiples de 5 et il doit y avoir minimum 5° d'écart et min < max
+var cons_min = -5; //constante température minimal (minimum -90)
+var cons_max = 25; //constante température maximal (maximum 90)
 
 var tp_semaine = []; //temperature semaine - tableau qui contiendra les relevé
 var tp_avg = 0; // temperature average - moyenne des temparature
@@ -75,19 +76,32 @@ function minMaxMoy(array){ //fonction qui calcule le max, le minimum et la moyen
 }
 
 function affichage_resultat(releves){ //fonction d'affichage des résultats en baragraphe
-    tp_semaine = releves; //temparture de la semaine
+    tp_semaine = releves; //relevé de temperature de la semaine
     cl="";  //console log
     maxi= tp_semaine.length; //taille du tableau tp_semaine
+    var range= cons_max-cons_min; // écart entre le min et le max possible
     var etoile = 0; //nombre de '*' à afficher 
     var mmm = minMaxMoy(tp_semaine); //var qui stockera le resultat de la fonction minMaxMoy
         
-    cl+="  Relevé des temperatures de cette semaine\n\n";
-    cl+=" |-5|00|05|10|15|20|\n";
+    cl+="  Relevé des temperatures de cette semaine\n\n";    
+    cl += " ";
+    for (h=0; h<((range/5)+1); h++){ //construction de l'entete en fonction du range
+        var col_entete = ((h*5)+cons_min); //entête colonne 
+        if (col_entete === 0 || col_entete ===5){ // si l'entete ne fait qu'un symbole
+            cl += "|0"+col_entete;
+        }else if(col_entete <-5){                 // si l'entete fait 3 symbole
+            cl += col_entete;
+        }else{
+            cl += "|"+col_entete;
+        }
+    }   
+    cl += "\n";
+
     for(i=0;i<maxi;i++){ //pour chaque jour de la semaine
-        etoile = Math.round((tp_semaine[i]+5)/2.5); //conversion de la T° en '*'
+        etoile = Math.round((tp_semaine[i]-cons_min)/2.5); //conversion de la T° en '*'
         
         cl += jour_semaine[i].charAt(0).toUpperCase()+"|"; //on garde la première lettre de chaque jour de la semaine et on la met en majuscule
-        for (j = 0; j<12;j++){  //12 etoiles possible entre -5 et 25
+        for (j = 0; j<(range/2.5);j++){  //1* = 2.5°C
             if(j%2===0){        //si on est sur une colonne impaire
                 if (j<etoile){  //si on a pas fini d'afficher la T°
                     cl +="*";
@@ -118,46 +132,4 @@ function affichage_resultat(releves){ //fonction d'affichage des résultats en b
 }
 tp_semaine = encodageSemaine();//appel de la fonction encodage
 affichage_resultat(tp_semaine);//appel de la fonction affichage
-
-
-//
-//function valMin(array){
-//    var minimum;
-//    for (var i = 0, max = array.length; i<max ; i++){
-//        if(i===0){
-//            minimum = array[i];
-//        }else{
-//            if (array[i]<minimum){
-//                minimum = array[i];
-//            }
-//        }     
-//    }
-//    return minimum;
-//}
-//function valMax(array){
-//    var maximum;
-//    for (var i=0, max = array.length; i<max; i++){
-//        if(i===0){
-//            maximum = array[i];
-//        }else{
-//            if (array[i]>maximum){
-//                maximum = array[i];
-//            }
-//        }
-//    }
-//    return maximum;
-//}
-//
-//function arrayAverage(array){
-//    var somme =0;
-//    var moyenne=0;
-//    var max = array.length;
-//    for (var i=0; i<max; i++){
-//        somme += array[i];
-//    }
-//    moyenne = somme/max;
-//    return moyenne;
-//}
-
-
 
