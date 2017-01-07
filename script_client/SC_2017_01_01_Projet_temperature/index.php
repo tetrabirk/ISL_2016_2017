@@ -53,6 +53,6 @@ Bon travail !<br/>
 Alain Martel
         </code>
         
-        <script src="js/projet01b.js" type="text/javascript"></script>
+        <script src="js/projet01.js" type="text/javascript"></script>
     </body>
 </html>
