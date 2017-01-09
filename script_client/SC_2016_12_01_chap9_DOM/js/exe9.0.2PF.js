@@ -17,16 +17,20 @@
 //console.log(form_byid);
 //
 
-var test= "test";
+var testObjet = {};
+function checkForm(){
+    
+    var tag;
+    var input_form = document.getElementsByTagName('form');
+    for(var i = 0, max = input_form[0].length;i<max;i++ ){
+        tag = input_form[0][i].id;
+        testObjet[tag] =  input_form[0][i].value;
+    }
 
-
-var input_form = document.getElementsByTagName('form');
-//
-//console.log(input_form[0].childNodes);
-//
-
-for(var i = 0, max = input_form[0].length;i<max;i++ ){
-    console.log(input_form[0][i].value);
+    console.log(testObjet);
+    if(testObjet.nom ==='Bob'){
+        console.log("youpie");
+        document.querySelector('#teston').innerHTML = '<p>ceci est un test<p>';
+    }
+    return false;
 }
-
-console.log(test);
