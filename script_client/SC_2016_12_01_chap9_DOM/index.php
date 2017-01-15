@@ -23,14 +23,13 @@ and open the template in the editor.
             <h2 class="important">Bye Bye</h2>
             <h2>Formulaire</h2>
             <form name="form" id="form" onsubmit="return checkForm();">
-                <input id="nom" type="text" name="nom" value="Bob"/><br/>
-                <input id="prenom" type="text" name="prenom" value="Boberson"/><br/>
-                <input id="date" type="date" name="date" value="1992-01-02"/><br/>
-                <input id="email" type="text" name="email" value="test@test.com"/><br/>
-                <input id="submit" type="submit" value="ok"/><br/>
+                <input id="nom" type="text" name="nom" value="Bob"/><span id ="nomtest"></span><br/>
+                <input id="prenom" type="text" name="prenom" value="Boberson"/><span id ="prenomtest"></span><br/>
+                <input id="date" type="date" name="date" value="1992-01-02"/><span id ="datetest"></span><br/>
+                <input id="email" type="text" name="email" value="test@test.com"/><span id ="emailtest"></span><br/>
+                <input id="submit" type="submit" value="ok"/><span id ="nomtest"></span><br/>
                 
             </form>
-            <div id="teston"></div>
             
             <a href="soluce/index.html">test</a>
          

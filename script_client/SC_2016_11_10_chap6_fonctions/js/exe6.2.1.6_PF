@@ -1,0 +1,12 @@
+<?php
+
+//-Vous devez créer un namespace reprenant les fonctions d'addition, de soustraction, de multiplication et de division (attention à bien tester la cohérence des valeurs).
+//
+//-Vous demanderez à l'utilisateur de saisir les opérandes et opérateur.
+//
+//-si l'opérateur n'existe pas, vous afficherez un message adéquat.
+//
+//-Après trois erreurs, le programme affiche un message signifant la fin de l'exécution.
+//
+//-si tout est valide, vous afficherez l'opération et le résultat.
+

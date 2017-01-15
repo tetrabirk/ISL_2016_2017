@@ -12,9 +12,7 @@ and open the template in the editor.
     </head>
     <body>
         <div>
-            <script src="js/exe1.1.js" type="text/javascript"></script>
-            <script src="js/exe1.2PF.js" type="text/javascript"></script>
-            <script src="js/exe1.3PF.js" type="text/javascript"></script>
+            <script src="js/exe0.3PF.js" type="text/javascript"></script>
         </div>
     </body>
 </html>

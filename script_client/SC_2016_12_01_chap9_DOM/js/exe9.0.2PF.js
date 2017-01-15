@@ -17,20 +17,25 @@
 //console.log(form_byid);
 //
 
-var testObjet = {};
+var eleve = {};
+var regex_nom = /^[a-zA-Zéè-]{2,30}$/;
 function checkForm(){
     
     var tag;
     var input_form = document.getElementsByTagName('form');
     for(var i = 0, max = input_form[0].length;i<max;i++ ){
         tag = input_form[0][i].id;
-        testObjet[tag] =  input_form[0][i].value;
+        eleve[tag] =  input_form[0][i].value;
     }
 
-    console.log(testObjet);
-    if(testObjet.nom ==='Bob'){
-        console.log("youpie");
-        document.querySelector('#teston').innerHTML = '<p>ceci est un test<p>';
+    console.log(eleve);
+    if(!regex_nom.test(eleve.nom)){
+        console.log(eleve.nom);
+        document.querySelector('#nomtest').innerHTML = 'nom invalide';
+    }
+    if(!regex_nom.test(eleve.prenom)){
+        console.log(eleve.prenom);
+        document.querySelector('#prenomtest').innerHTML = 'prenom invalide';
     }
     return false;
 }
