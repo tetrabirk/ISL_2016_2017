@@ -34,6 +34,7 @@ and open the template in the editor.
             <a href="soluce/index.html">test</a>
          
         </main>
-        <script src="js/exe9.0.2PF.js" type="text/javascript"></script>
+        <script src="js/exe9.1.2 PF.js" type="text/javascript"></script>
+        
     </body>
 </html>
