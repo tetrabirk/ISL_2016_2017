@@ -15,35 +15,20 @@ if(file_exists("controler/".$get_p.".php")){
 }
 
 // include du <head> html
-include_once("include/head.php");
 
-?>
-
-    <body>
-         <?php
     if(preg_match("/^admin/i", $get_p)) {
-        include_once("include/admin_menu.php");
+        include_once("include/admin_head.php");
     }else{
-        include_once("include/menu.php");
+        include_once("include/public_head.php");
     }
-    ?>
-
-    <div class='container' id='content'>
+?>
+    <body>
         <?php
-        // vérification de l'existence du fichier view déclaré dans le controler sous la variable $view_file
-        if(isset($view_file) && file_exists("view/".$view_file.".php")){
-            // si le fichier existe, il est inclus
-            include_once("view/".$view_file.".php");
+        if(preg_match("/^admin/i", $get_p)) {
+            include_once("include/admin_layout.php");
         }else{
-            // sinon le script courant est arrêté et un message d'erreur est affiché
-            exit("<h1>Erreur d'affichage !</h1>");
+            include_once("include/public_layout.php");
         }
         ?>
-
-    </div>
-
-<?php
-include_once("include/footer.php");
-?>
     </body>
 </html>

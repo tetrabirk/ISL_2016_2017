@@ -1,25 +1,44 @@
-<?php
-// partie visuelle de la page home
-// -> partie html dans laquelle peut être intégrée du code php
+<ul class="full slider-horizontal nav" id='slideroustic'>
+            <?php
+            for($i = 1; $i <= 23; $i++){
+            ?>
+<li><a href="#goto_<?php echo $i; ?>">Titre de l'actualité <?php echo $i; ?></a></li>
+            <?php
+            }
+            ?>
 
-// récupération et association des infos dans le array result_page
-$title          = $result_page[0]["item_title"];
-$subtitle       = $result_page[0]["item_subtitle"];
-$description    = $result_page[0]["item_description"];
-?>
-
-            <div class='nine columns'>
+        </ul>
+        <input type="hidden" name="memo_position" id="memo_position" value="0" />
+        <div class='full row'>
+            <a class="one column leftArrow">&#10096;</a>
+            
+            <div class="ten columns slide" id="viewer">
                 <?php
-                echo !empty($title) ? "<h1>$title</h1>" : "";
-                echo !empty($subtitle) ? "<h2>$subtitle</h2>" : "";
-                echo !empty($description) ? $description : "";
+                for($i = 1; $i <= 23; $i++){
                 ?>
+                
+                <div class="bloc_news" id='goto_<?php echo $i; ?>'>
+                    <div>
+                        <h2>Titre de l'actualité <?php echo $i; ?></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum cursus volutpat tortor non lacinia.</p>
+                        <p>Quisque feugiat justo eu vulputate tempus.</p>
+                        <p>Praesent pretium porta lacus, ut feugiat diam.</p>
+                    </div>
+                    <img src="images/actualite_test.png" alt="Photo actualité" id="viewer_zoom_1" />
+                </div>
+                <?php
+                }
+                ?>
+                
+                <div class="inlineblock" id="comble"></div>
             </div>
-
-            <div class='three columns' id='news_box'>
-                <ul>
-                    <li><a href='' title=''><b>Lorem ipsum</b>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae...</a></li>
-                    <li><a href='' title=''><b>Lorem ipsum</b>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae...</a></li>
-                    <li><a href='' title=''><b>Lorem ipsum</b>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae...</a></li>
-                </ul>
-            </div>
+            
+            <a class="one column rightArrow">&#10097;</a>
+        </div>
+        
+        
+        <script>
+            $("#slideroustic").mouseover(function () { 
+                $(".www_FlowSlider_com-branding").remove();
+            });
+        </script>
