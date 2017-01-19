@@ -1,0 +1,6 @@
+var Blog = {
+    utilisateurs: [],
+    articles: []
+    
+    
+};
