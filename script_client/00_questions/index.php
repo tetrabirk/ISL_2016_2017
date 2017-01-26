@@ -10,6 +10,10 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        <p>
+            -fonction de callback?
+            
+        </p>
         
         <script src="js/exe9.1.2 PF.js" type="text/javascript"></script>
         
