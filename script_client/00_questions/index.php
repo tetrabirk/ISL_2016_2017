@@ -13,5 +13,39 @@ and open the template in the editor.
         
         <script src="js/exe9.1.2 PF.js" type="text/javascript"></script>
         
+        <!--prototype????-->
+        <code>//pourquoi ceci fonctionne
+            var Blog = {
+                utilisateurs: [],
+                articles: []   
+
+            };
+
+            Blog.banane= 'test';
+
+            Blog.addUser = function(nom,prenom,email,login,motdepasse){
+                    if(Blog.utilisateurs.indexOf(login)===-1){
+                        Blog.utilisateurs.push(login);
+                    }
+                };
+    
+        </code>
+        <code>//et ceci pas
+            var Blog = {
+                utilisateurs: [],
+                articles: []   
+
+            };
+
+            Blog.banane= 'test';
+
+            Blog.prototype.addUser = function(nom,prenom,email,login,motdepasse){
+                    if(Blog.utilisateurs.indexOf(login)===-1){
+                        Blog.utilisateurs.push(login);
+                    }
+                };
+    
+        </code>
+        
     </body>
 </html>

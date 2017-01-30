@@ -9,5 +9,7 @@ function Article(titre, contenu, redacteur){
     this.votesPos = 0;
     this.voteNeg = 0;
     this.visible = true;
+    
 }
-var article1 = new Article('boby','blabla','bob');
+
+

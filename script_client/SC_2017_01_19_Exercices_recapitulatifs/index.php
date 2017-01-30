@@ -65,9 +65,9 @@ Vous délivrerez donc au moins cinq fichiers :</p>
             <li>test</li>
         </ol>
         
+        <script src="js/exe_reca_blog.js" type="text/javascript"></script>
         <script src="js/exe_reca_utilisateur.js" type="text/javascript"></script>
         <script src="js/exe_reca_article.js" type="text/javascript"></script>
-        <script src="js/exe_reca_blog.js" type="text/javascript"></script>
         <script src="js/exe_reca_commentaire.js" type="text/javascript"></script>
         <script src="js/exe_reca_test.js" type="text/javascript"></script>
     </body>   

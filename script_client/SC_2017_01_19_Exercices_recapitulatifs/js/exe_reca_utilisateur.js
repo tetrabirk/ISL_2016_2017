@@ -5,6 +5,8 @@ function Utilisateur(nom,prenom,email,login,motdepasse){
     this.login = login;
     this.motdepasse = motdepasse;
     
-    
-    
+    this.testLogin = function(pseudo){
+        return(this.login.indexOf(pseudo)===-1);
+    };
 }
+
