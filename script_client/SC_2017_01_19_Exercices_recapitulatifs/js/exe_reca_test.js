@@ -10,13 +10,16 @@
 //
 //console.log();
 
-Blog.addUser('leyens','ludovic','ludovic.leyens@gmail.com','Birk','password');
-Blog.addUser('robert','boberss','bob.bobberson1@gmail.com','Boby','password');
+var birk = Blog.addUser('leyens','ludovic','ludovic.leyens@gmail.com','Birk','password');
+var bob = Blog.addUser('robert','boberss','bob.bobberson1@gmail.com','Boby','password');
+
 
 console.log(Utilisateur);
-console.log(Blog);
-
-Blog.addUser('leyens','ludovic','ludovic.leyens@gmail.com','Birk','password');
-Blog.addUser('leyens','ludovic','ludovic.leyens@gmail.com','Birk','password');
-
 console.log(Blog.utilisateurs);
+console.log(birk);
+var i=0;
+for (var test in Blog.utilisateurs){
+    
+    console.log(Blog.utilisateurs[test]['login']);
+    
+}
