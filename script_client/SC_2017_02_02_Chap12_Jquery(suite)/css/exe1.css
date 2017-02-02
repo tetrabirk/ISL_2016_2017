@@ -1,0 +1,19 @@
+.blue{
+    color: blue;
+}
+
+.hidden{
+    display:none;
+}
+.default_color{
+    color: grey;
+}
+.default font{
+    font-family: Courier;
+}
+.no_bullet{
+    list-style: none;
+}
+#no_delete{
+    
+}

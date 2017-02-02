@@ -1,6 +1,6 @@
 var Blog = {
-    utilisateurs : [],
-    articles : []
+    utilisateurs : {},
+    articles : {}
 };
 
 
@@ -12,7 +12,7 @@ Blog.addUser = function(nom,prenom,email,login,motdepasse){
 //    }
     
     var user = new Utilisateur(nom,prenom,email,login,motdepasse);
-    this.utilisateurs.push(user);
+    this.utilisateurs[login](user);
     return user;
 };
 
@@ -20,7 +20,7 @@ Blog.getUser = function(){
   
 };
 
-    
+  
 //Blog.addArticle = function(titre,contenu,redacteur){
 //    if(Blog.articles.indexOf('titre')===-1){
 //        Blog.cours_suivis.push('titre');

@@ -18,6 +18,7 @@ console.log(Utilisateur);
 console.log(Blog.utilisateurs);
 console.log(birk);
 var i=0;
+
 for (var test in Blog.utilisateurs){
     
     console.log(Blog.utilisateurs[test]['login']);
