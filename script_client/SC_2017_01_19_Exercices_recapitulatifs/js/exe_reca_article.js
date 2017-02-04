@@ -9,7 +9,7 @@ function Article(titre, contenu, redacteur){
     this.votesPos = 0;
     this.voteNeg = 0;
     this.visible = true;
-    
+        
 }
 
 
