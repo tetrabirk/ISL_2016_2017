@@ -25,11 +25,11 @@ Blog.addUser = function(nom,prenom,email,login,motdepasse){
 };
 
 Blog.getUsers = function(){
-//    if(Blog.utilisateurs.length === undefined){
-//        return false;
-//    }else{
+    if(Blog.utilisateurs.length === 0){
+        return false;
+    }else{
         return Blog.utilisateurs;    
-//    }
+    }
 };
 
 Blog.titleExist = function(titreR){ //titre Rechercher
@@ -51,7 +51,7 @@ Blog.articleNbrefromTitle = function(titreR){
 };
 
 Blog.addArticle = function(titre, contenu, redacteur){
-    var testtitre = Blog.titleExist(titre)
+    var testtitre = Blog.titleExist(titre);
     if(!testtitre){
         var article = new Article(titre, contenu, redacteur);
         Blog.articles.push(article);
@@ -61,11 +61,11 @@ Blog.addArticle = function(titre, contenu, redacteur){
 };  
     
 Blog.getArticles = function(){
-//    if(Blog.articles.length === undefined){
-//        return false;
-//    }else{
+    if(Blog.articles.length ===0){
+        return false;
+    }else{
         return Blog.articles;    
-//    }
+    }
 };
 
 Blog.modifArticle = function(ancientitre,nouveautitre,texte){
@@ -88,4 +88,9 @@ Blog.modifArticle = function(ancientitre,nouveautitre,texte){
             console.log("ce titre d'article n'existe pas");
             return;
         }
- };
+};
+
+Blog.addCommentToArticle = function(titreA,contenu,redacteur){
+    var temp= Blog.articleNbrefromTitle(titreA);
+    Blog.articles[temp].addCommentaire(contenu,redacteur);
+};

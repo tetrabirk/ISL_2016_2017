@@ -1,4 +1,4 @@
-function Commentaire(contenu, redacteur, article){
+function Commentaire(contenu, redacteur){
     this.contenu = contenu;
     this.dateCrea = new Date();
     this.dateModif =null;

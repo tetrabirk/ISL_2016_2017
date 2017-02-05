@@ -14,6 +14,15 @@ console.log(Blog.getUsers());
 
 console.log(Blog);
 
-console.log(Blog.getArticles());
 Blog.modifArticle('Titre1','Titre123','nouveau texte bcp plus court');
-console.log(Blog.getArticles());
+
+
+var temp = Blog.articleNbrefromTitle('Titre123');
+//
+//Blog.articles[temp].addCommentaire('texte test','birk');
+
+Blog.addCommentToArticle('Titre123','ceci est un commentaire, ton blog il pue du cul','boby');
+Blog.addCommentToArticle('Titre123','ceci est aussi un commentaire, vive le blog','birk');
+
+console.log(Blog.articles[temp]);
+
