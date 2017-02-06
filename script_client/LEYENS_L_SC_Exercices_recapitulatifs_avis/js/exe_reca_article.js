@@ -7,7 +7,7 @@ function Article(titre, contenu, redacteur){
     this.redacteur = redacteur;
     this.commentaires = [];
     this.votesPos = 0;
-    this.votesNeg = 0;
+    this.voteNeg = 0;
     this.visible = true;
     
     //fonction qui permet d'ajouter un commentaire à un article, après avoir vérifié que l'utilisateur existe
@@ -18,19 +18,6 @@ function Article(titre, contenu, redacteur){
             this.commentaires.push(comment);
         }else{
             console.log("le login "+test+" n'existe pas");
-        }
-    };
-    this.addPoint = function(valeur){
-        var val = parseInt(valeur);
-        if(!isNaN(val)){
-            if(val>0){
-                this.votesPos += val;
-            }else{
-                this.votesNeg += ((-1)* (val));
-            }
-                
-        }else{
-            console.log("il est impossible d'ajouter '"+valeur+"' votes");
         }
     };
         

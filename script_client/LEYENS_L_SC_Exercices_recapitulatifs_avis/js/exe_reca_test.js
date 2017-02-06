@@ -25,9 +25,5 @@ Blog.modifArticle('Titre1','Titre2','nouveau texte bcp plus court');
 Blog.addCommentToArticle('Titre2','ceci est un commentaire, ton blog il est nul','boby');
 Blog.addCommentToArticle('Titre2','ceci est aussi un commentaire, vive le blog','birk');
 
-Blog.addPointToArticle('Titre2',-2)
-Blog.addPointToArticle('Titre2',5)
-Blog.addPointToComment('Titre2','0',-7)
-Blog.addPointToComment('Titre2','0',4)
 //console log de l'objet Blog
-console.log(Blog.articles);
+console.log(Blog);

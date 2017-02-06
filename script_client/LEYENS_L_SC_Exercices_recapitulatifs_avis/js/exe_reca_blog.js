@@ -104,13 +104,3 @@ Blog.addCommentToArticle = function(titreA,contenu,redacteur){
     var temp= Blog.articleNbrefromTitle(titreA);
     Blog.articles[temp].addCommentaire(contenu,redacteur);
 };
-
-Blog.addPointToArticle = function(titreA,valeur){
-    var temp= Blog.articleNbrefromTitle(titreA);
-    Blog.articles[temp].addPoint(valeur);
-};
-
-Blog.addPointToComment = function(titreA,comment,valeur){
-    var temp= Blog.articleNbrefromTitle(titreA);
-    Blog.articles[temp].commentaires[comment].addPoint(valeur);
-};
