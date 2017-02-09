@@ -9,7 +9,7 @@
 //● retirer la classe no_bullet de toutes les listes
 
 $(document).ready(function(){
-    $('p').each(function(parag){
+    $('p').each(function(){
         if($(this).hasClass('hidden')){
             $(this).removeClass('hidden');
         }else{
@@ -17,7 +17,15 @@ $(document).ready(function(){
         }
     });
     
-    $('*[class ~="blue"]').css('color','red')
+    $('*[class ~="blue"]').css('color','red');
     
-    $('*[class ~="default_font"]').css('font-family','Verdana')
+    $('*[class ~="default_font"]').css('font-family','Verdana');
+    
+    $('a').each(function(){
+        $(this).addClass('no_decoration');
+    });
+    
+    
+    $('ul').removeClass('no_bullet');
+    
 });

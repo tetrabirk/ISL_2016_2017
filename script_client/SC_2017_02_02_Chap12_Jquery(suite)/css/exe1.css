@@ -17,3 +17,7 @@
 #no_delete{
     
 }
+
+.no_decoration{
+    text-decoration: none;
+}
