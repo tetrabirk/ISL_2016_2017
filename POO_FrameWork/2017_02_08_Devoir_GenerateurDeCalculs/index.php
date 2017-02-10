@@ -1,3 +1,4 @@
+<!--LEYENS Ludovic --> 
 <?php
     require_once __DIR__.'/OperationsGenerator.php';
     require_once __DIR__.'/OperationsSolver.php';
@@ -20,11 +21,14 @@
     }
 
     
-    echo "<hr/><br/>".'TEST'."<br/><br/>";
+    echo "<hr/><br/>".'TEST ARRAY MAP'."";
+    echo "<p>je vois le principe mais pas comment l'utiliser de façon élégante dans ce cas précis<p>";
     
     $soluce = array_map('OperationSolver::solve',$operations);
     
     print_r($soluce);
+    
+    echo "<br/><br/><br/><br/><hr/><p style='font-size:12px'><i>c'était quoi déjà la règle de bonne pratique sur les balise html dans le php ?</i></p>"
     
     
 //    echo $generator->miseEnForme($operations);

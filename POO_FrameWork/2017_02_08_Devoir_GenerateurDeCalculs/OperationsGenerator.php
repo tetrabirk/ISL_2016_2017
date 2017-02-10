@@ -1,3 +1,4 @@
+<!--LEYENS Ludovic --> 
 <?php
     class OperationsGenerator{
         public $operators =["+","-","*","/"]; //operateurs
