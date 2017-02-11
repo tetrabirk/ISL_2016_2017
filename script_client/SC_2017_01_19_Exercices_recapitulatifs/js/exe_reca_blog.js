@@ -114,3 +114,54 @@ Blog.addPointToComment = function(titreA,comment,valeur){
     var temp= Blog.articleNbrefromTitle(titreA);
     Blog.articles[temp].commentaires[comment].addPoint(valeur);
 };
+
+Blog.bestArticle = function(){
+    var best=[];
+    best.max= Math.log(0); //-infinity
+    for (var article in Blog.articles){
+        var points = Blog.articles[article].getPoints();
+        if (points>best.max){
+            
+            best.article = article;
+            best.max = points;
+        };
+    }
+    return best;
+    
+};
+
+Blog.bestComment = function(article){
+    var best =[];
+    best.max=Math.log(0); //-infinty
+    for (var comment in Blog.articles[article].commentaires){
+        var points = Blog.articles[article].commentaires[comment].getPoints();
+        if (points>best.max){
+            
+            best.comment = comment;
+            best.max = points;
+        };
+    }
+    return best;
+};
+
+Blog.ArticlesFromUser = function (user){
+    var articles =[];
+    for (var article in Blog.articles){
+        if(Blog.articles[article].redacteur === user){
+            articles.push(Blog.articles[article]);
+        }
+    }
+    return articles;
+};
+
+Blog.CommentsFromUser = function (user){
+    var comments =[];
+    for (var article in Blog.articles){
+        for (var comment in Blog.articles[article].commentaires){
+            if(Blog.articles[article].commentaires[comment].redacteur === user){
+                comments.push(Blog.articles[articles].commentaires);
+            }
+        }
+    }
+    return comments;
+}

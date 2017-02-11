@@ -19,6 +19,11 @@ function Commentaire(contenu, redacteur){
             console.log("il est impossible d'ajouter '"+valeur+"' votes");
         }
     };
+    
+    this.getPoints  = function(){
+        var points = (this.votesPos)-(this.votesNeg);
+        return points;
+    };
         
     
     

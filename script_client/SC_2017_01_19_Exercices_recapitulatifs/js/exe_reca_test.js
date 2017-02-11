@@ -11,10 +11,11 @@ var july = Blog.addUser('Jamesson','julie','julie.jammeson@gmail.com','July','pa
 var title_1="Titre1";
 var txt_1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed odio neque. Quisque blandit, felis sit amet dictum lobortis, sem ligula sodales libero, in sollicitudin odio massa sed dolor. Maecenas sit amet augue id elit lobortis ullamcorper. Vivamus dapibus mauris eget sapien lacinia, at finibus tortor commodo. Suspendisse potenti. Etiam dignissim id diam dapibus fermentum. Duis pharetra ante ex, ac facilisis elit placerat sit amet. Morbi interdum rutrum risus sed imperdiet. Maecenas scelerisque risus et est sollicitudin facilisis. In laoreet lectus nisi, ut semper justo pretium eget.";
 
-var article1 = Blog.addArticle(title_1,txt_1,'anto');
+var article1 = Blog.addArticle(title_1,txt_1,'Anto');
 //initiation d'un deuxième article
-var article2 = Blog.addArticle('Mon Deuxième article',"cet article est beauuucoup plus court",'july');
-
+var article2 = Blog.addArticle('Mon Deuxième article',"cet article est beauuucoup plus court",'July');
+var artilce3 = Blog.addArticle('TITRE','meilleur article de tt les temps','Birk');
+var artilce4 = Blog.addArticle('TITRE4','meilleur article de tt les temps','Birk');
 //console log de l'objet Blog
 console.log(Blog);
 
@@ -31,3 +32,11 @@ Blog.addPointToComment('Titre2','0',-7)
 Blog.addPointToComment('Titre2','0',4)
 //console log de l'objet Blog
 console.log(Blog.articles);
+
+console.log(Blog.bestArticle());
+console.log(Blog.bestComment(0));
+
+console.log(Blog.utilisateurs['Birk'].getInfos());
+console.log(Blog.utilisateurs['Anto'].getInfos());
+console.log(Blog.utilisateurs['Boby'].getInfos());
+
