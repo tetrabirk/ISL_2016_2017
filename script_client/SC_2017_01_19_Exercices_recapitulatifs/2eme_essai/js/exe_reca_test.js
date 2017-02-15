@@ -25,3 +25,5 @@ blog.articles[0].modification('titre','SuperTitre');
 blog.articles[1].modification('contenu','Celui qui lit ceci est un âne');
 
 console.log(blog);
+
+console.log(blog.getInfosFromUser('birk'));

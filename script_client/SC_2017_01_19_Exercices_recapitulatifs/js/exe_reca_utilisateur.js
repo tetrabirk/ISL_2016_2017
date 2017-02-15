@@ -7,16 +7,6 @@ function Utilisateur(nom,prenom,email,login,motdepasse)
     this.login = login;
     this.motdepasse = motdepasse;
 
-    this.getInfos= function(){
-        var info=[];
-        info.login = this.login;
-        info.nom = this.nom;
-        info.prenom = this.prenom;
-        info.email = this.email;
-        info.articles= Blog.ArticlesFromUser(this.login);
-        info.commentaires=Blog.CommentsFromUser(this.login);
-        return info;
-        
-    };
+    
 };
 
