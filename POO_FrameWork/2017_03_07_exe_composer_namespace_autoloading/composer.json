@@ -1,0 +1,18 @@
+{
+    "name": "leyensl/2017_03_07_exe_composer_namespace_autoloading",
+    "description": "exercice 3",
+    "require": {
+        "fzaninotto/faker": "^1.6"
+    },
+    "autoload":{
+        "psr-4":{
+            "ISL\\" : "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ludovic Leyens",
+            "email": "ludovic.leyens@gmail.com"
+        }
+    ]
+}
