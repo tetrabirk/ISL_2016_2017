@@ -55,6 +55,13 @@ class Personne {
         $this->societe = $societe;
     }
 
-
+    public function hydrate(array $datas){
+        foreach ($datas as $key => $valeur){
+            $nomMethode = "set".ucfirst($key);
+            if (method_exists($this, $nomMethode)){
+                $this->$nomMethode($valeur);
+            }
+        }
+    }
 }
 ?>

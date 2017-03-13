@@ -3,10 +3,18 @@ require_once __DIR__.'./src/Entity/Personne.php';
 require_once __DIR__.'./src/Manager/PersonneManager.php';
 require_once __DIR__.'./vendor/autoload.php';
 
+
+
+require_once __DIR__.'./src/database.php';
 $test = new \ISL\Manager\PersonneManager();
+$datas = $test->randomPerson();
 
-print_r($test->create(2));
+$bob = new Personne();
 
+
+$bob->hydrate($datas);
+
+print_r($bob);
 
 
 ?>

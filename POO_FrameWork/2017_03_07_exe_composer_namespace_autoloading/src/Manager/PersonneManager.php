@@ -18,24 +18,28 @@ class PersonneManager{
         return $person;
         
     }
-    public function create($nbre){
-        $groupe = [];
-        for ($i=0; $i<$nbre; $i++){
-            $person = $this->randomPerson();
-            
-            $groupe[$i]= new \Personne();
-            
-            $groupe[$i]->setNom($person['nom']);
-            $groupe[$i]->setPrenom($person['prenom']);
-            $groupe[$i]->setAdresse($person['adresse']);
-            $groupe[$i]->setCp($person['cp']);
-            $groupe[$i]->setPays($person['pays']);
-            $groupe[$i]->setSociete($person['societe']);
-            
-        }
-        return $groupe;
-        
-    }
+//    public function create($nbre){
+//        $groupe = [];
+//        for ($i=0; $i<$nbre; $i++){
+//            $person = $this->randomPerson();
+//            
+//            $groupe[$i]= new \Personne();
+//            
+//            $groupe[$i]->setNom($person['nom']);
+//            $groupe[$i]->setPrenom($person['prenom']);
+//            $groupe[$i]->setAdresse($person['adresse']);
+//            $groupe[$i]->setCp($person['cp']);
+//            $groupe[$i]->setPays($person['pays']);
+//            $groupe[$i]->setSociete($person['societe']);
+//            
+//        }
+//        return $groupe;
+//        
+//    }
+    
+//    public function ($data){
+//        
+//    }
     
     
     
