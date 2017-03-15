@@ -11,11 +11,11 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <div id='actions'>
-            <input type="radio" name="action" value="delete">Delete
-            <input type="radio" name="action" value="add">Add
-            <input type="radio" name="action" value="move">Move
-        </div>
+        <form id='actions'>
+            <input type="radio" name="action" id="r_delete" value="delete">Delete
+            <input type="radio" name="action" id="r_add" value="add">Add
+            <input type="radio" name="action" id="r_move" value="move">Move
+        </form>
             
         <table>
             

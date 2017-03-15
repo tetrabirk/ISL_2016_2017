@@ -12,3 +12,15 @@
 //    si c'est move
 //        mmmm voir point 4.4 je ne suis pas sure
 //(si c'est une colonne)
+
+
+$(document).ready(function(){
+    var form = $('input');
+    var action;
+    $(form).change(function(){
+        action = $("#actions input[type='radio']:checked");
+        console.log(action);
+    });
+    console.log(action);
+    
+});
