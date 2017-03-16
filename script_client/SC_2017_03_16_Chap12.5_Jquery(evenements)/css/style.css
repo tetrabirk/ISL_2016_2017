@@ -1,0 +1,51 @@
+#color{
+    display : flex;
+    flex-direction: row;
+    justify-content : center;
+    margin-top: 100px;
+}
+
+#color div{
+    flex: 0 1 auto;
+    margin: 5px;
+    width: 80px;
+    height: 80px;
+}
+
+#red{
+    background-color: red;
+}
+#blue{
+    background-color: blue;
+}
+#yellow{
+    background-color: yellow;
+}
+#green{
+    background-color: green;
+}
+#text{
+    font-family: Arial;
+    font-size: 50pt;
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+}
+
+#circle{
+    border-radius:50px;
+    background-color: magenta;
+}
+
+input{
+    margin:5px;
+}
+
+#nom, #prenom{
+    width: 100px;
+}
+#date{
+    width: 105px;
+}
+
+
