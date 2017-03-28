@@ -35,14 +35,6 @@ try{
 
 
 $test = new \ISL\Manager\PersonneManager();
-//$datas = $test->randomPerson();
-//
-//$bob = new Personne();
-//
-//
-//$bob->hydrate($datas);
-//
-//print_r($bob);
 
 $groupe = $test->create(5);
 
