@@ -71,13 +71,13 @@ function display_errors(){
         });
     }
 }
-    
-    
-    if(error_msg.length !==0){
-        
-    }
-    $(error_msg).appendTo($("#erreur ul"));
-}
+//    
+//    
+//    if(error_msg.length !==0){
+//        
+//    }
+//    $(error_msg).appendTo($("#erreur ul"));
+//}
 
 
 });
