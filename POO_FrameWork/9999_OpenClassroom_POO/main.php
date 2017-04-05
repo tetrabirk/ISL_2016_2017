@@ -1,5 +1,5 @@
 <?php
-
+//autoload
 function chargerClasse($classe)
 {
   require $classe . '.php'; 
@@ -7,19 +7,38 @@ function chargerClasse($classe)
 
 spl_autoload_register('chargerClasse');
 
-$perso1 = new Personnage(Personnage::FORCE_MOYENNE);
-$perso2 = new Personnage(Personnage::FORCE_GRANDE);
+$exception ="";
 
+//connexion pdo
 
-Personnage::parler();
+try{
+    $db = new PDO('mysql:host=localhost;dbname=poo_php','root','');
+    $db->exec("SET CHARACTER SET utf8");
+}catch(\PDOException $exception){
+    //une erreur s'est produite
+    echo 'catastrophe! '. $exception->getMessage();
+}
 
-//$perso1->frapper($perso2);  // $perso1 frappe $perso2
-//$perso1->gagnerExperience(); // $perso1 gagne de l'expérience
+////==============================================================================
+//$request = $db->query('SELECT id, nom, forcePerso, degats, niveau, experience FROM personnages');
+//while ($donnees = $request->fetch(PDO::FETCH_ASSOC)){
+//    $perso = new Personnage;
+//    $perso->hydrate($donnees);
 //
-//$perso2->frapper($perso1);  // $perso2 frappe $perso1
-//$perso2->gagnerExperience(); // $perso2 gagne de l'expérience
-//
-//echo 'Le personnage 1 a ', $perso1->force(), ' de force, contrairement au personnage 2 qui a ', $perso2->force(), ' de force.<br />';
-//echo 'Le personnage 1 a ', $perso1->experience(), ' d\'expérience, contrairement au personnage 2 qui a ', $perso2->experience(), ' d\'expérience.<br />';
-//echo 'Le personnage 1 a ', $perso1->degats(), ' de dégâts, contrairement au personnage 2 qui a ', $perso2->degats(), ' de dégâts.<br />';
+//}
+////================================================================================
 
+$perso = new Personnage([
+    'nom' => 'Victor',
+    'forcePerso' => 5,
+    'degats' => 0,
+    'niveau' => 1,
+    'experience' => 0
+]);
+
+$manager = new PersonnagesManager($db);
+
+$manager->add($perso); //n'ajoute pas d'élément à ma db mais ne retourne pas d'erreur non plus
+$list = $manager->getList(); //retourne un array avec 3 éléments (comme dans ma db) mais tout est vide (NULL).
+
+var_dump($list);
