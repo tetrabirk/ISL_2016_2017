@@ -2,71 +2,36 @@
 
 namespace ISL\Entity\Etudiant;
 
-class Etudiant {
+class Etudiant extends \ISL\Entity\Personne {
     
-    
-    private $nom;
-    private $prenom;
-    private $adresse;
-    private $cp;
-    private $pays;
-    private $societe;
-    
-    function getNom() {
-        return $this->nom;
+    private $coursSuivis=[];
+    private $niveau = "";
+    private $dateDInscription;
+
+    function getCoursSuivis() {
+        return $this->coursSuivis;
     }
 
-    function getPrenom() {
-        return $this->prenom;
+    function getNiveau() {
+        return $this->niveau;
     }
 
-    function getAdresse() {
-        return $this->adresse;
+    function getDateDInscription() {
+        return $this->dateDInscription;
     }
 
-    function getCp() {
-        return $this->cp;
+    function setCoursSuivis($coursSuivis) {
+        $this->coursSuivis = $coursSuivis;
     }
 
-    function getPays() {
-        return $this->pays;
+    function setNiveau($niveau) {
+        $this->niveau = $niveau;
     }
 
-    function getSociete() {
-        return $this->societe;
+    function setDateDInscription($dateDInscription) {
+        $this->dateDInscription = $dateDInscription;
     }
 
-    function setNom($nom) {
-        $this->nom = $nom;
-    }
-
-    function setPrenom($prenom) {
-        $this->prenom = $prenom;
-    }
-
-    function setAdresse($adresse) {
-        $this->adresse = $adresse;
-    }
-
-    function setCp($cp) {
-        $this->cp = $cp;
-    }
-
-    function setPays($pays) {
-        $this->pays = $pays;
-    }
-
-    function setSociete($societe) {
-        $this->societe = $societe;
-    }
-
-    public function hydrate(array $datas){
-        foreach ($datas as $key => $valeur){
-            $nomMethode = "set".ucfirst($key);
-            if (method_exists($this, $nomMethode)){
-                $this->$nomMethode($valeur);
-            }
-        }
-    }
+ 
 }
 ?>

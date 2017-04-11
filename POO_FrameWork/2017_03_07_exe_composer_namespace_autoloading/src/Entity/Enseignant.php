@@ -1,8 +1,37 @@
 <?php
+namespace ISL\Entity\Enseignant;
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+class Etudiant extends \ISL\Entity\Personne {
+    
+    private $coursDonnes=[];
+    private $EntreEnService;
+    private $Anciennete;
+    
+    function getCoursDonnes() {
+        return $this->coursDonnes;
+    }
 
+    function getEntreEnService() {
+        return $this->EntreEnService;
+    }
+
+    function getAnciennete() {
+        return $this->Anciennete;
+    }
+
+    function setCoursDonnes($coursDonnes) {
+        $this->coursDonnes = $coursDonnes;
+    }
+
+    function setEntreEnService($EntreEnService) {
+        $this->EntreEnService = $EntreEnService;
+    }
+
+    function setAnciennete($Anciennete) {
+        $this->Anciennete = $Anciennete;
+    }
+
+
+    
+}
+?>

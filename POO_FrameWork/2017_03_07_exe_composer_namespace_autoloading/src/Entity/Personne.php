@@ -1,4 +1,7 @@
 <?php
+
+namespace ISL\Entity\Personne;
+
 class Personne {
     private $nom;
     private $prenom;
