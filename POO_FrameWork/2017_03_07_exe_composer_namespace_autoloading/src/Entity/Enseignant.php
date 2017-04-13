@@ -1,18 +1,18 @@
 <?php
-namespace ISL\Entity\Enseignant;
+namespace ISL\Entity;
 
-class Etudiant extends \ISL\Entity\Personne {
+class Enseignant extends Personne {
     
     private $coursDonnes=[];
-    private $EntreEnService;
+    private $EntreeEnService;
     private $Anciennete;
     
     function getCoursDonnes() {
         return $this->coursDonnes;
     }
 
-    function getEntreEnService() {
-        return $this->EntreEnService;
+    function getEntreeEnService() {
+        return $this->EntreeEnService;
     }
 
     function getAnciennete() {
@@ -23,8 +23,8 @@ class Etudiant extends \ISL\Entity\Personne {
         $this->coursDonnes = $coursDonnes;
     }
 
-    function setEntreEnService($EntreEnService) {
-        $this->EntreEnService = $EntreEnService;
+    function setEntreeEnService($EntreeEnService) {
+        $this->EntreeEnService = $EntreeEnService;
     }
 
     function setAnciennete($Anciennete) {

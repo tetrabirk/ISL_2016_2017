@@ -1,8 +1,8 @@
 <?php
 
-namespace ISL\Entity\Etudiant;
+namespace ISL\Entity;
 
-class Etudiant extends \ISL\Entity\Personne {
+class Etudiant extends Personne {
     
     private $coursSuivis=[];
     private $niveau = "";
@@ -31,7 +31,8 @@ class Etudiant extends \ISL\Entity\Personne {
     function setDateDInscription($dateDInscription) {
         $this->dateDInscription = $dateDInscription;
     }
-
+    
+    
  
 }
 ?>

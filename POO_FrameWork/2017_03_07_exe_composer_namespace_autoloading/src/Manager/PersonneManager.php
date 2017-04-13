@@ -24,7 +24,7 @@ class PersonneManager{
         for ($i=0; $i<$nbre; $i++){
             $person = $this->randomPerson();
             
-            $groupe[$i]= new \ISL\Entity\Personne\Personne();
+            $groupe[$i]= new \ISL\Entity\Personne();
             
 //            $groupe[$i]->setNom($person['nom']);
 //            $groupe[$i]->setPrenom($person['prenom']);
@@ -38,6 +38,8 @@ class PersonneManager{
         return $groupe;
         
     }
+    
+    
     
 //    public function ($data){
 //        

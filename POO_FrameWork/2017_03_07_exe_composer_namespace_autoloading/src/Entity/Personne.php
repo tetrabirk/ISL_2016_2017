@@ -1,6 +1,6 @@
 <?php
 
-namespace ISL\Entity\Personne;
+namespace ISL\Entity;
 
 class Personne {
     private $nom;
