@@ -12,12 +12,17 @@ class Personnage {
     private $_experience;
     
     //methode d'hydratation
-    
+    public function __construct(array $donnees) {
+        $this->hydrate($donnees);
+    }
     public function hydrate(array $donnees){ //recoit les donnee sous forme d'array
         foreach($donnees as $key => $value){ 
             $method = 'set'.ucfirst($key); // par exemple setNom ($key = 'nom')
             if(method_exists($this,$method)){   //si la methode existe
                 $this->$method($value);         //this->setNom('bob')
+                
+                
+
             }
         }
     }
@@ -75,5 +80,3 @@ class Personnage {
     }
 
 }
-
-?>

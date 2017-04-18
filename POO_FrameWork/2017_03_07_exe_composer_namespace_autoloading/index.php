@@ -34,13 +34,16 @@ try {
 //}
 
 
-$test = new \ISL\Manager\EtudiantManager();
-$testteacher = new \ISL\Manager\EnseignantManager();
+$test = new \ISL\Manager\EtudiantManager($connex);
+//$testteacher = new \ISL\Manager\EnseignantManager($connex);
 
 $groupea = $test->create(5);
-$groupeb = $test->createStudent(3);
-$groupec = $testteacher->createTeacher(2);
-$groupe = array_merge($groupea, $groupeb, $groupec);
+//$groupeb = $test->createStudent(3);
+//$groupec = $testteacher->createTeacher(2);
+
+
+$groupe = $groupea;
+//$groupe = array_merge($groupea, $groupeb, $groupec);
 
 //bout de code pour affichage 
 

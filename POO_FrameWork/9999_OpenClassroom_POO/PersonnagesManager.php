@@ -1,15 +1,19 @@
 <?php
 
 class PersonnagesManager {
-
+    /** @var \PDO */
     private $_db; //instance de pdo
 
     //constructeur
     
-    public function __construct($db) {
+    public function __construct(\PDO $db) {
         $this->setDb($db);
     }
     //getter
+    /**
+     * 
+     * @return \PDO
+     */
     public function getDb() {
         return $this->_db;
     }
@@ -21,15 +25,18 @@ class PersonnagesManager {
 //C R U D ici j'ai suivi ce qu'il disait sur le site en vérifiant que c'était la même syntaxe que dans les slides du cours
     
     public function add(Personnage $perso) { // CREATE
+//        var_dump($perso);
+        /** @var \PDOStatement */
         $q = $this->getDb()->prepare( //ici, lui mettais _db au lieu de passer par le getter mais je ne pense pas que le probleme vient de là
-            'INSERT INTO personnages(nom, forcePerso, degats, niveau,experience) VALUES(:nom,:forcePerso, :degats, :niveau,:experience)'
+            'INSERT INTO personnages(nom, forcePerso, degats, niveau,experience) VALUES(:nom, :forcePerso, :degats, :niveau, :experience)'
                 );
+        
         $q->bindValue(':nom',$perso->nom());
         $q->bindValue(':forcePerso',$perso->forcePerso(),PDO::PARAM_INT);
         $q->bindValue(':degats',$perso->degats(),PDO::PARAM_INT);
         $q->bindValue(':niveau',$perso->niveau(),PDO::PARAM_INT);
         $q->bindValue(':experience',$perso->experience(),PDO::PARAM_INT);
-        
+
         $q->execute();
     }
 

@@ -3,12 +3,19 @@
 namespace ISL\Entity;
 
 class Personne {
+    
+    
     private $nom;
     private $prenom;
     private $adresse;
     private $cp;
     private $pays;
     private $societe;
+    
+//    public function __construct(array $donnees) {
+//        $this->hydrate($donnees);
+//    }
+//    
     
     function getNom() {
         return $this->nom;

@@ -4,7 +4,6 @@ function chargerClasse($classe)
 {
   require $classe . '.php'; 
 }
-
 spl_autoload_register('chargerClasse');
 
 $exception ="";
@@ -33,11 +32,16 @@ $perso = new Personnage([
     'forcePerso' => 5,
     'degats' => 0,
     'niveau' => 1,
-    'experience' => 0
+    'experience' =>4 
 ]);
 
-$manager = new PersonnagesManager($db);
+//var_dump($perso);
 
+
+$manager = new PersonnagesManager($db);
+//
+//echo "<br/>var dump perso<br/>";
+//var_dump($perso);
 $manager->add($perso); //n'ajoute pas d'élément à ma db mais ne retourne pas d'erreur non plus
 $list = $manager->getList(); //retourne un array avec 3 éléments (comme dans ma db) mais tout est vide (NULL).
 
