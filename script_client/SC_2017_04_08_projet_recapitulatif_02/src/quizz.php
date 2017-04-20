@@ -52,7 +52,11 @@ $return = array();
 if (isset($_GET['question'])) {
     if (array_key_exists($_GET['question'], $questions)) {
         $return = $questions[$_GET['question']];
+    }else{
+        $return = "array key 'question' does not exist";
     }
-}
+}else{
+        $return = 'get is not set';
+    }
 
 echo json_encode($return);
