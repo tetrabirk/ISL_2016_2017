@@ -37,6 +37,8 @@ try {
 $test = new \ISL\Manager\EtudiantManager($connex);
 //$testteacher = new \ISL\Manager\EnseignantManager($connex);
 
+
+
 $groupea = $test->create(5);
 //$groupeb = $test->createStudent(3);
 //$groupec = $testteacher->createTeacher(2);
@@ -93,7 +95,7 @@ foreach ($groupe as $pers) {
         $html .="</td>";
 
         $html .="<td>";
-        $html .= $pers->getDateDInscription();
+        $html .= $pers->getDateDInscription()->format('d/m/Y');
         $html .="</td>";
     }
     if(get_class($pers) == 'ISL\Entity\Enseignant') {
@@ -106,7 +108,7 @@ foreach ($groupe as $pers) {
         $html .="</td>";
 
         $html .="<td>";
-        $html .= $pers->getEntreeEnService();
+        $html .= $pers->getEntreeEnService()->format('d/m/Y');
         $html .="</td>";
     }
 
