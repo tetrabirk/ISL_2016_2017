@@ -19,15 +19,15 @@ and open the template in the editor.
     <body>
         <div id="main">
             <h1 class="question"></h1>
-            <input type="radio" name="reponse" class="reponse" value="1">
-            <input type="radio" name="reponse" class="reponse" value="2">
-            <input type="radio" name="reponse" class="reponse" value="3">
+            <form id="propositions">
+            </form>
+            
             <br/>
-            <button>précédente</button>
-            <button>suivante</button>
-            <button>valider</button>
+            <button id="precedente">précédente</button>
+            <button id="suivante">suivante</button>
+            <button id="valider">valider</button>
             <button id="test">test</button>
-            <p id="result"></p>
+            <p id="msg"></p>
         </div>
         <script src="js/jquery-3.1.1.js" type="text/javascript"></script>
         <script src="js/main.js" type="text/javascript"></script>
