@@ -2,6 +2,7 @@ var qId=1;
 var qdata;
 var reponses=[];
 var nbreQuestions =5;
+var correction = false;
 
 function afficherQuestion(data){
     $('.question').text(data['question']);
@@ -12,18 +13,18 @@ function afficherPropositions(data){
 //    var reponse = getReponse();
     
         $.each((data['propositions']),function(key,value){
-            html +="<input type='radio' name='proposition' class='proposition' value="+(key+1);
+            html +="<div class='proposition'><input type='radio' name='proposition' value="+(key+1);
             if(parseInt(reponses[qId-1])===(key+1)){
                 html +=" checked ";
             }
-            html +=">" + value +"<br/>";
+            html +=">" + value +"</div>";
         });
         $('#propositions').html(html);
 }
 
 
     
-function loadPage(id, action){
+function loadPage(id){
         $(document).ready(function(){
     //-----requete ajax
             $.get('src/quizz.php',{question:id},function(data){
@@ -31,8 +32,9 @@ function loadPage(id, action){
                 afficherQuestion(qdata);
                 afficherPropositions(qdata);
                 limitButton(id);
-                if(action ==='correction'){
+                if(correction){
                     comparaisonReponse(qdata);
+                    $('input').attr('disabled',true);
                 }
             },'json');
         });
@@ -49,36 +51,46 @@ function selection(){
 function comparaisonReponse(data){
     var reponse = parseInt(reponses[qId-1]);
     var solution = data['correct'];
-
+    console.log(reponse + ' ' + solution);
     if(reponse === solution){
-        $("input[name=proposition]:checked").css('background-color','limegreen');
+        $("form div:nth-child("+reponse+")").css('background-color','limegreen');
+        affMsg('bravo');
+    }else{
+        $("form div:nth-child("+reponse+")").css('background-color','red');
+        $("form div:nth-child("+solution+")").css('background-color','limegreen');
+        affMsg('faux');
     }
 }
 
-function affErreur(type){
+function affMsg(type){
     var msg ='';
     switch(type){
         case 'selection':
             msg = 'Veuillez répondre à cette question';
+            $('#main').css('background-color','lightpink').css('border-color','red');
             break;
+        case 'bravo':
+            msg = 'bonne réponse!';
+            break;
+        case 'faux':
+            msg = 'FAUX!';
+            break;
+            
         case 'reset':
             msg = '';
+            $("#main").css('background-color','').css('border-color','');
             break;
         default :
             msg = "une erreur s'est produite";
     }
     $('#msg').text(msg);
-    if(type === 'reset'){
-        $("#main").css('background-color','').css('border-color','');
-    }else{
-        $('#main').css('background-color','lightpink').css('border-color','red');
-    }
+   
     
 }
 
 function stockerReponse(){
     reponses[qId-1] = selection();
-    console.log(reponses);
+//    console.log(reponses);
     
 }
 
@@ -99,6 +111,9 @@ function limitButton(id){
     }else{
         $('#valider').prop("disabled",false);
     }
+    if (correction){
+        $('#valider').css("display",'none');
+    }
 }
 
 $('#propositions').change(function(){
@@ -111,11 +126,11 @@ $('#propositions').change(function(){
 //suivant
 $('#suivante').click(function() {
     if(selection() === undefined){
-        affErreur('selection');
+        affMsg('selection');
     }else if(selection()){
         stockerReponse();
         qId++;
-        affErreur('reset');
+        affMsg('reset');
         loadPage(qId);
     }
         
@@ -132,8 +147,9 @@ $('#precedente').click(function() {
 $('#valider').click(function(){
     stockerReponse();
     qId =1;
-    affErreur('reset');
-    loadPage(qId,'correction');
+    affMsg('reset');
+    correction = true;
+    loadPage(qId);
 });
 
 loadPage(qId);
