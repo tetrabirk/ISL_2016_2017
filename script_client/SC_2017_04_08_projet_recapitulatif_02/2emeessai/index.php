@@ -29,6 +29,9 @@ and open the template in the editor.
             <p id="msg"></p>
         </div>
         <script src="js/jquery-3.1.1.js" type="text/javascript"></script>
+        <script src="js/Questionnaire.js" type="text/javascript"></script>
+        <script src="js/Question.js" type="text/javascript"></script>
+        <script src="js/Message.js" type="text/javascript"></script>
         <script src="js/main.js" type="text/javascript"></script>
     </body>
 </html>
