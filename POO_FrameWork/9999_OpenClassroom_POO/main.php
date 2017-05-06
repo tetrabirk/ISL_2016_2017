@@ -11,7 +11,7 @@ $exception ="";
 //connexion pdo
 
 try{
-    $db = new PDO('mysql:host=localhost;dbname=poo_php','root','');
+    $db = new PDO('mysql:host=localhost;dbname=poo_php','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     $db->exec("SET CHARACTER SET utf8");
 }catch(\PDOException $exception){
     //une erreur s'est produite
@@ -35,7 +35,6 @@ $perso = new Personnage([
     'experience' =>4 
 ]);
 
-//var_dump($perso);
 
 
 $manager = new PersonnagesManager($db);
