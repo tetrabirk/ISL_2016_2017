@@ -1,0 +1,23 @@
+body{
+    background-color: wheat;
+    color: slategrey;
+    font-family: arial;
+    
+}
+#main{
+    width: 400px;
+    border: 1px solid brown;
+    margin: 30px auto;
+    padding: 20px 10px 0 10px;
+}
+
+label{
+    margin-bottom: 20px;
+    width: 120px;
+    display: inline-block;
+    text-align: right;
+    
+}
+select{
+    width: 240px;
+}
